@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion should collapse an expanded element if clicked again 1`] = `
+<Accordion
+  bordered={false}
+  startCollapsed={false}
+>
+  <div
+    className="usa-accordion "
+  >
+    <AccordionItem
+      accordionIndex={0}
+      action={[Function]}
+      expanded={true}
+      key=".0"
+      title="First Amendment"
+      titleElement="h2"
+    >
+      <h2
+        className="usa-accordion__heading"
+      >
+        <button
+          aria-controls="component-unique-id-18-content"
+          aria-expanded={true}
+          className="usa-accordion__button"
+          onClick={[Function]}
+        >
+          <span>
+            First Amendment
+          </span>
+        </button>
+      </h2>
+      <div
+        className="usa-accordion__content usa-prose"
+        id="component-unique-id-18-content"
+      >
+        <p
+          key=".0"
+        >
+          Congress shall make no law respecting an establishment of ...
+        </p>
+      </div>
+    </AccordionItem>
+    <AccordionItem
+      accordionIndex={1}
+      action={[Function]}
+      expanded={false}
+      key=".1"
+      title=""
+      titleElement="h2"
+    >
+      <h2
+        className="usa-accordion__heading"
+      >
+        <button
+          aria-controls="component-unique-id-19-content"
+          aria-expanded={false}
+          className="usa-accordion__button"
+          onClick={[Function]}
+        >
+          <span
+            key=".0"
+          >
+            Second Amendment
+          </span>
+        </button>
+      </h2>
+    </AccordionItem>
+  </div>
+</Accordion>
+`;
+
+exports[`Accordion should render correctly 1`] = `
+<Accordion
+  bordered={false}
+  startCollapsed={false}
+>
+  <div
+    className="usa-accordion "
+  >
+    <AccordionItem
+      accordionIndex={0}
+      action={[Function]}
+      expanded={true}
+      key=".0"
+      title="First Amendment"
+      titleElement="h2"
+    >
+      <h2
+        className="usa-accordion__heading"
+      >
+        <button
+          aria-controls="component-unique-id-0-content"
+          aria-expanded={true}
+          className="usa-accordion__button"
+          onClick={[Function]}
+        >
+          <span>
+            First Amendment
+          </span>
+        </button>
+      </h2>
+      <div
+        className="usa-accordion__content usa-prose"
+        id="component-unique-id-0-content"
+      >
+        <p
+          key=".0"
+        >
+          Congress shall make no law respecting an establishment of ...
+        </p>
+      </div>
+    </AccordionItem>
+    <AccordionItem
+      accordionIndex={1}
+      action={[Function]}
+      expanded={false}
+      key=".1"
+      title=""
+      titleElement="h2"
+    >
+      <h2
+        className="usa-accordion__heading"
+      >
+        <button
+          aria-controls="component-unique-id-1-content"
+          aria-expanded={false}
+          className="usa-accordion__button"
+          onClick={[Function]}
+        >
+          <span
+            key=".0"
+          >
+            Second Amendment
+          </span>
+        </button>
+      </h2>
+    </AccordionItem>
+  </div>
+</Accordion>
+`;

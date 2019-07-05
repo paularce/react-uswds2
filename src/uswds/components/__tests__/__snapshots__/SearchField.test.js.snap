@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchField should render correctly 1`] = `
+<form
+  className="usa-search "
+>
+  <div
+    role="search"
+  >
+    <label
+      class="usa-sr-only"
+      htmlFor="testId"
+    >
+      Search
+    </label>
+    <input
+      class="usa-input"
+      id="testId"
+      name="testId"
+      type="search"
+    />
+    <button
+      class="usa-button"
+      type="submit"
+    >
+      <span
+        className="usa-search__submit-text"
+      >
+        Search
+      </span>
+    </button>
+  </div>
+</form>
+`;

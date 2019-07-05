@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormGroup should render correctly 1`] = `
+<FormGroup
+  hasError={false}
+>
+  <div
+    className="usa-form-group "
+  >
+    <TextInput
+      classes=""
+      enableSpellCheck={false}
+      id="myId"
+      label="label goes here"
+      required={false}
+      type="text"
+    >
+      <InputLabel
+        hasError={false}
+        htmlFor="myId"
+        label="label goes here"
+        required={false}
+      >
+        <label
+          className="usa-label"
+          htmlFor="myId"
+          id="myId-label"
+        >
+          label goes here
+        </label>
+      </InputLabel>
+      <input
+        aria-labelledby="myId-label"
+        aria-required={false}
+        className="usa-input  null"
+        id="myId"
+        name="myId"
+        onBlur={[Function]}
+        onChange={[Function]}
+        required={false}
+        spellCheck={false}
+        type="text"
+        value=""
+      />
+    </TextInput>
+  </div>
+</FormGroup>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should render correctly 1`] = `
+<form
+  action=""
+  className="usa-form "
+  id=""
+  name=""
+>
+  <Fieldset
+    legend="Name"
+    legendHidden={false}
+  >
+    <TextInput
+      classes=""
+      enableSpellCheck={false}
+      id="last-name"
+      label="Last name"
+      required={false}
+      type="text"
+    />
+  </Fieldset>
+</form>
+`;

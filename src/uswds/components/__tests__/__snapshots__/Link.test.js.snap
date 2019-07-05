@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link should render correctly 1`] = `
+<NavLink
+  activeClassName="usa-current"
+  to="/testURL"
+>
+  This is a link
+</NavLink>
+`;
