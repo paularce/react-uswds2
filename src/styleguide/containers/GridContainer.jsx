@@ -1,9 +1,9 @@
 import React from "react";
 import { DocsPage, DocsSection, DocsExample, DocsPreview } from './Docs.jsx';
-import Label from '../../uswds/components/Label';
 import Highlight from 'react-highlight';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
 import { Grid, Col } from '../../uswds/components/Grid';
+import Tag from '../../uswds/components/Tag';
 
 /**
  * Grid content
@@ -38,7 +38,7 @@ export default function GridContainer() {
         <h4>Col</h4>
         <Table columns={['Prop', 'Type', 'Default', 'Description']}>
           <TableRow>
-            <TableHeaderCell>classes <Label>Required</Label></TableHeaderCell>
+            <TableHeaderCell>classes<br /><Tag>Required</Tag></TableHeaderCell>
             <TableCell>string</TableCell>
             <TableCell>&nbsp;</TableCell>
             <TableCell>grid-col classes </TableCell>

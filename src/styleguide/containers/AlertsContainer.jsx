@@ -2,11 +2,8 @@ import React from 'react';
 import { DocsPage, DocsSection, DocsExample, DocsPreview } from './Docs.jsx';
 import Highlight from 'react-highlight';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
-import Label from '../../uswds/components/Label';
 import Alert from '../../uswds/components/Alert';
 import Tag from '../../uswds/components/Tag';
-
-
 
 /**
  * Displays the Styleguide content for Alerts.

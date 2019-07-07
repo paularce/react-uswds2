@@ -2,7 +2,7 @@ import React from "react";
 import { DocsPage, DocsSection, DocsExample, DocsPreview } from './Docs.jsx';
 import Highlight from 'react-highlight';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
-import Label from '../../uswds/components/Label';
+import Tag from '../../uswds/components/Tag';
 
 /**
  * Displays the Styleguide content for Tables.
@@ -57,7 +57,7 @@ export default function TablesContainer() {
         <h4>Table</h4>
         <Table columns={['Prop', 'Type', 'Default', 'Description']}>
           <TableRow>
-            <TableHeaderCell>cols  <Label>Required</Label></TableHeaderCell>
+            <TableHeaderCell>cols  <br /><Tag>Required</Tag></TableHeaderCell>
             <TableCell>array</TableCell>
             <TableCell>&nbsp;</TableCell>
             <TableCell>
@@ -95,7 +95,7 @@ export default function TablesContainer() {
         <h4>TableHeaderCell</h4>
         <Table columns={['Prop', 'Type', 'Default', 'Description']}>
           <TableRow>
-            <TableHeaderCell>scope  <Label>Required</Label></TableHeaderCell>
+            <TableHeaderCell>scope  <br /><Tag>Required</Tag></TableHeaderCell>
             <TableCell>oneOf ['col', 'row']</TableCell>
             <TableCell>'row'</TableCell>
             <TableCell>

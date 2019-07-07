@@ -1,9 +1,9 @@
 import React from "react";
-import Label from '../../uswds/components/Label';
 import { DocsPage, DocsSection, DocsExample, DocsPreview } from './Docs.jsx';
 import Highlight from 'react-highlight';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
 import Button from "../../uswds/components/Button";
+import Tag from '../../uswds/components/Tag';
 
 /**
  * Buttons content
@@ -24,7 +24,7 @@ export default function ButtonsContainer () {
       <DocsSection title="Props">
         <Table columns={['Prop', 'Type', 'Default', 'Description']}>
           <TableRow>
-            <TableHeaderCell>text  <Label>Required</Label></TableHeaderCell>
+            <TableHeaderCell>text  <Tag>Required</Tag></TableHeaderCell>
             <TableCell>string</TableCell>
             <TableCell>&nbsp;</TableCell>
             <TableCell>...</TableCell>

@@ -2,9 +2,9 @@ import React from "react";
 import { DocsPage, DocsSection, DocsExample, DocsPreview } from './Docs.jsx';
 import Highlight from 'react-highlight';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
-import Label from '../../uswds/components/Label';
 import SearchField from "../../uswds/components/SearchField";
 import { Grid, Col } from '../../uswds/components/Grid';
+import Tag from '../../uswds/components/Tag';
 
 /**
  * Displays the Styleguide content for Search Bars.
@@ -33,7 +33,7 @@ export default class SearchBarContainer extends React.Component
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
-              <TableHeaderCell>id  <Label>Required</Label></TableHeaderCell>
+              <TableHeaderCell>id <br /><Tag>Required</Tag></TableHeaderCell>
               <TableCell>string</TableCell>
               <TableCell></TableCell>
               <TableCell>Page unique Id for the input</TableCell>

@@ -2,7 +2,6 @@ import React from 'react';
 import { DocsPage, DocsComponent, DocsSection, DocsExample, DocsPreview } from './Docs.jsx';
 import Highlight from 'react-highlight';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
-import Label from '../../uswds/components/Label';
 import TextInput from '../../uswds/components/TextInput';
 import TextArea from '../../uswds/components/TextArea';
 import Dropdown from '../../uswds/components/Dropdown';
@@ -11,7 +10,7 @@ import Radio from '../../uswds/components/Radio';
 import Fieldset from '../../uswds/components/Fieldset';
 import FormGroup from  '../../uswds/components/FormGroup';
 import { EmailValidator, ZipCodeValidator, PhoneValidator } from '../../uswds/utils/validators';
-
+import Tag from '../../uswds/components/Tag';
 
 /**
  * Content for the form controls page
@@ -35,7 +34,7 @@ export default function FormControlsContainer() {
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
-              <TableHeaderCell>label  <Label>Required</Label></TableHeaderCell>
+              <TableHeaderCell>label  <Tag>Required</Tag></TableHeaderCell>
               <TableCell>string</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>Text for the input's label</TableCell>
@@ -182,7 +181,7 @@ export default function FormControlsContainer() {
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
-              <TableHeaderCell>label  <Label>Required</Label></TableHeaderCell>
+              <TableHeaderCell>label  <Tag>Required</Tag></TableHeaderCell>
               <TableCell>string</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>Text for the input's label</TableCell>
@@ -256,13 +255,13 @@ export default function FormControlsContainer() {
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
-              <TableHeaderCell>label  <Label>Required</Label></TableHeaderCell>
+              <TableHeaderCell>label  <Tag>Required</Tag></TableHeaderCell>
               <TableCell>string</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>the text for the label</TableCell>
             </TableRow>
             <TableRow>
-              <TableHeaderCell>children  <Label>Required</Label></TableHeaderCell>
+              <TableHeaderCell>children  <Tag>Required</Tag></TableHeaderCell>
               <TableCell>node</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>expects a series of <code>option</code> elements</TableCell>
@@ -367,7 +366,7 @@ export default function FormControlsContainer() {
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
-              <TableHeaderCell>label  <Label>Required</Label></TableHeaderCell>
+              <TableHeaderCell>label  <Tag>Required</Tag></TableHeaderCell>
               <TableCell>string</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>the text for the label</TableCell>
@@ -451,7 +450,7 @@ export default function FormControlsContainer() {
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
-              <TableHeaderCell>label  <Label>Required</Label></TableHeaderCell>
+              <TableHeaderCell>label  <Tag>Required</Tag></TableHeaderCell>
               <TableCell>string</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>the text for the label</TableCell>
@@ -532,7 +531,7 @@ export default function FormControlsContainer() {
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
-              <TableHeaderCell>legend  <Label>Required</Label></TableHeaderCell>
+              <TableHeaderCell>legend  <Tag>Required</Tag></TableHeaderCell>
               <TableCell>string</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>screen-reader only label of what the radio or checkbox group represents. Many screen readers will read the legend for each control, so it shoud be
@@ -546,7 +545,7 @@ export default function FormControlsContainer() {
               brief and descriptive. Required for 508 compliance.</TableCell>
             </TableRow>
             <TableRow>
-              <TableHeaderCell>children  <Label>Required</Label></TableHeaderCell>
+              <TableHeaderCell>children  <Tag>Required</Tag></TableHeaderCell>
               <TableCell>node</TableCell>
               <TableCell>&nbsp;</TableCell>
               <TableCell>expects two or more checkboxes or radio buttons</TableCell>

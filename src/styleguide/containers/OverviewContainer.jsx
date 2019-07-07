@@ -2,7 +2,7 @@ import React from "react";
 import { DocsPage, DocsComponent, DocsSection, DocsExample, DocsPreview } from './Docs.jsx';
 import Highlight from 'react-highlight';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
-import Label from '../../uswds/components/Label';
+import Tag from '../../uswds/components/Tag';
 /**
  * Displays the Overview for the Styleguide.
  */
@@ -40,7 +40,7 @@ export default class OverviewContainer extends React.Component
           <DocsSection title="Props">
             <Table columns={['Prop', 'Type', 'Default', 'Description']}>
               <TableRow>
-                <TableHeaderCell>propName  <Label>Required</Label></TableHeaderCell>
+                <TableHeaderCell>propName<br /><Tag>Required</Tag></TableHeaderCell>
                 <TableCell>bool</TableCell>
                 <TableCell>false</TableCell>
                 <TableCell>What_it_does</TableCell>
