@@ -4,6 +4,7 @@ import Highlight from 'react-highlight';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
 import Label from '../../uswds/components/Label';
 import Alert from '../../uswds/components/Alert';
+import Tag from '../../uswds/components/Tag';
 
 
 
@@ -29,28 +30,28 @@ export default function AlertsContainer () {
       <DocsSection title="Props">
         <Table columns={['Prop', 'Type', 'Default', 'Description']}>
           <TableRow>
-            <TableHeaderCell>title  <Label>Required</Label></TableHeaderCell>
+            <TableHeaderCell>body <Tag>Required</Tag></TableHeaderCell>
+            <TableCell>string or node</TableCell>
+            <TableCell>&nbsp;</TableCell>
+            <TableCell>the text for the body/description</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell>title <Tag>Required</Tag></TableHeaderCell>
             <TableCell>string</TableCell>
             <TableCell>&nbsp;</TableCell>
             <TableCell>the text for the title</TableCell>
           </TableRow>
           <TableRow>
-            <TableHeaderCell>body  <Label>Required</Label></TableHeaderCell>
-            <TableCell>string or node</TableCell>
-            <TableCell>&nbsp;</TableCell>
-            <TableCell>the text for the body/description</TableCell>
+            <TableHeaderCell>role</TableHeaderCell>
+            <TableCell>oneOf ['alert', 'alertdialog']</TableCell>
+            <TableCell>*see description</TableCell>
+            <TableCell>Sets the ARIA role property. If the alert has type="error" and no role is specified, role="alert" is automatically added. Use "alert"to inform of a time-sensitive and important message that is not interactive. If the message is interactive, use "alertdialog" instead</TableCell>
           </TableRow>
           <TableRow>
             <TableHeaderCell>type</TableHeaderCell>
             <TableCell>oneOf ['success', 'warning', 'error', 'info']</TableCell>
             <TableCell>'info'</TableCell>
             <TableCell>sets the background color and icon</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableHeaderCell>role</TableHeaderCell>
-            <TableCell>string</TableCell>
-            <TableCell>*see description</TableCell>
-            <TableCell>Sets the ARIA role property. If the alert has type="error" and no role is specified, role="alert" is automatically added. Use "alert"to inform of a time-sensitive and important message that is not interactive. If the message is interactive, use "alertdialog" instead</TableCell>
           </TableRow>
         </Table>
       </DocsSection>

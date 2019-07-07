@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 export default class Label extends React.Component {
   
   static propTypes = {
-    modifier: PropTypes.oneOf(['required', 'error', 'big', 'small']),
+    modifier: PropTypes.oneOf(['required', 'error']),
     children: PropTypes.node.isRequired
   };
 

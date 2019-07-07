@@ -34,28 +34,21 @@ export default function Alert ({type, title, body, role}) {
   );
 }
 
-const TYPE_INFO = 'info';
-const TYPE_SUCCESS = 'success';
-const TYPE_ERROR = 'error';
-const TYPE_WARNING = 'warning';
-const ROLE_ALERT = 'alert';
-const ROLE_ALERTDIALOG = 'alertdialog';
-
 Alert.propTypes = {
   type: PropTypes.oneOf([
-    TYPE_INFO,
-    TYPE_SUCCESS,
-    TYPE_ERROR,
-    TYPE_WARNING
+    'info',
+    'success',
+    'warning', 
+    'error'
   ]),
   title: PropTypes.string.isRequired,
   body: PropTypes.node.isRequired,
   role: PropTypes.oneOf([
-    ROLE_ALERT,
-    ROLE_ALERTDIALOG
+    'alert',
+    'alertdialog'
   ])
 };
 
 Alert.defaultProps = {
-  type: TYPE_INFO
+  type: 'info'
 };
