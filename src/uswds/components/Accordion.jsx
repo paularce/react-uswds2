@@ -194,8 +194,7 @@ export class AccordionItem extends React.Component {
   static defaultProps = {
     action: function() {},
     expanded: false,
-    title: "",
-    titleElement: "h2"
+    title: ""
   };
 
   /**

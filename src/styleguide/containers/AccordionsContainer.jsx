@@ -37,6 +37,12 @@ export default function AccordionsContainer() {
             <TableCell>If the accordion has a border or not</TableCell>
           </TableRow>
           <TableRow>
+            <TableHeaderCell>children</TableHeaderCell>
+            <TableCell>node</TableCell>
+            <TableCell>&nbsp;</TableCell>
+            <TableCell>Expected to be AccordionItems</TableCell>
+          </TableRow>
+          <TableRow>
             <TableHeaderCell>startCollapsed</TableHeaderCell>
             <TableCell>bool</TableCell>
             <TableCell>false</TableCell>
@@ -45,41 +51,10 @@ export default function AccordionsContainer() {
               loads 
             </TableCell>
           </TableRow>
-          <TableRow>
-            <TableHeaderCell>children</TableHeaderCell>
-            <TableCell>node</TableCell>
-            <TableCell>&nbsp;</TableCell>
-            <TableCell>Expected to be AccordionItems</TableCell>
-          </TableRow>
         </Table>
 
         <h4>AccordionItem</h4>
         <Table columns={["Prop", "Type", "Default", "Description"]}>
-          <TableRow>
-            <TableHeaderCell>title</TableHeaderCell>
-            <TableCell>string</TableCell>
-            <TableCell>
-              <em>empty string</em>
-            </TableCell>
-            <TableCell>Text that appears in the header area</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableHeaderCell>expanded</TableHeaderCell>
-            <TableCell>bool</TableCell>
-            <TableCell>false</TableCell>
-            <TableCell>
-              ???? If true, item is expanded by default ??????{" "}
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableHeaderCell>children</TableHeaderCell>
-            <TableCell>node</TableCell>
-            <TableCell>&nbsp;</TableCell>
-            <TableCell>
-              The content to be shown or hidden based on if the accordian item
-              is collapsed or not.
-            </TableCell>
-          </TableRow>
           <TableRow>
             <TableHeaderCell>accordionIndex</TableHeaderCell>
             <TableCell>number</TableCell>
@@ -94,6 +69,32 @@ export default function AccordionsContainer() {
             </TableCell>
             <TableCell>**Not sure what this does</TableCell>
           </TableRow>
+          <TableRow>
+            <TableHeaderCell>children</TableHeaderCell>
+            <TableCell>node</TableCell>
+            <TableCell>&nbsp;</TableCell>
+            <TableCell>
+              The content to be shown or hidden based on if the accordian item
+              is collapsed or not.
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell>expanded</TableHeaderCell>
+            <TableCell>bool</TableCell>
+            <TableCell>false</TableCell>
+            <TableCell>
+              ???? If true, item is expanded by default ??????{" "}
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell>title</TableHeaderCell>
+            <TableCell>string</TableCell>
+            <TableCell>
+              <em>empty string</em>
+            </TableCell>
+            <TableCell>Text that appears in the header area</TableCell>
+          </TableRow>
+
         </Table>
       </DocsSection>
 
