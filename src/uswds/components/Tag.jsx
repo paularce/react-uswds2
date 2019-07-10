@@ -23,7 +23,7 @@ export default class Tag extends React.Component {
 
   render() {
     return (
-      <span class={`usa-tag ${this.props.classes}`}>
+      <span className={`usa-tag ${this.props.classes}`}>
         {this.props.children}
       </span>
     );

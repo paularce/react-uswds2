@@ -17,6 +17,8 @@ $theme-image-path: '../../uswds/assets/img';
 
 @import '../../uswds/styles/uswds.scss';
 
+
+
 // Sidebar Nav --------- //
 
 .site-sidenav.usa-sidenav {
@@ -149,19 +151,24 @@ $theme-image-path: '../../uswds/assets/img';
   }
 }
 
-.grid-example {
-  box-sizing: border-box;
-  > div {
-    + div {
+.wrapper{
+  padding: 30px 15px;
+  &--grid {
+    box-sizing: border-box;
+  
+    [class*='grid-col'] {
+      background: #eee;
+      border: 1px solid #333;
+      line-height: 2em;
       margin-top: 5px;
+      padding: 0 5px;
+      text-align: center;
     }
   }
+}
 
-  [class*='grid-col'] {
-    background: #eee;
-    border: 1px solid #333;
-    padding: 0 5px;
-    text-align: center;
-    line-height: 2em;
+.usa-tag{
+  &.required {
+    background:  #c00;
   }
 }
