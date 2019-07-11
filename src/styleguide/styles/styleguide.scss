@@ -17,8 +17,6 @@ $theme-image-path: '../../uswds/assets/img';
 
 @import '../../uswds/styles/uswds.scss';
 
-
-
 // Sidebar Nav --------- //
 
 .site-sidenav.usa-sidenav {
@@ -53,7 +51,7 @@ $theme-image-path: '../../uswds/assets/img';
     }
   }
 
-  .usa-sidenav__item:first-child {
+  .usa-sidenav__item:first-of-type {
     .usa-current::after {
       border-top-left-radius: radius('md');
       top: units($site-border-width) * -1;

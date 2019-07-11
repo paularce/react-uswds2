@@ -2,7 +2,7 @@
 
 exports[`Tag should render correctly 1`] = `
 <span
-  class="usa-tag "
+  className="usa-tag "
 >
   TestText
 </span>

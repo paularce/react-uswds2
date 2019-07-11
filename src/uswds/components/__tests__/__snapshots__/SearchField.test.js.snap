@@ -8,19 +8,19 @@ exports[`SearchField should render correctly 1`] = `
     role="search"
   >
     <label
-      class="usa-sr-only"
+      className="usa-sr-only"
       htmlFor="testId"
     >
       Search
     </label>
     <input
-      class="usa-input"
+      className="usa-input"
       id="testId"
       name="testId"
       type="search"
     />
     <button
-      class="usa-button"
+      className="usa-button"
       type="submit"
     >
       <span
