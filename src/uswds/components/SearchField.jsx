@@ -44,13 +44,13 @@ export default class SearchField extends React.Component
     return (
       <form className={`usa-search ${this.props.size? 'usa-search--' + this.props.size : ''}`}>
         <div role="search">
-          <label class="usa-sr-only" htmlFor={this.props.id}>Search</label>
+          <label className="usa-sr-only" htmlFor={this.props.id}>Search</label>
           <input 
             type="search"
-            class="usa-input"
+            className="usa-input"
             name={this.props.id}
             id={this.props.id} />
-          <button class="usa-button" type="submit">
+          <button className="usa-button" type="submit">
             {buttonContents}
           </button>
         </div>

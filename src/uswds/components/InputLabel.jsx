@@ -21,7 +21,7 @@ export default function InputLabel ({label, labelHint, htmlFor, required, hasErr
       className={classes}
       htmlFor={htmlFor}>
       {label}
-      {labelHint && <span class="usa-hint"> {labelHint}</span>}
+      {labelHint && <span className="usa-hint"> {labelHint}</span>}
     </label>
   );
 }
