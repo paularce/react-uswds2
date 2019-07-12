@@ -18,7 +18,7 @@ https://v2.designsystem.digital.gov/style-tokens
 */
 
 // Accordion
-$theme-accordion-border-width:        0.5;
+$theme-accordion-border-width:        .5;
 $theme-accordion-border-color:        'base-lightest';
 $theme-accordion-font-family:         'body';
 
@@ -47,7 +47,7 @@ $theme-input-line-height:             3;
 $theme-input-max-width:               'mobile-lg';
 $theme-input-select-border-width:     2px;
 $theme-input-select-size:             2.5;
-$theme-input-state-border-width:      0.5;
+$theme-input-state-border-width:      .5;
 
 // Header
 $theme-header-font-family:            'ui';
@@ -62,5 +62,5 @@ $theme-search-font-family:            'ui';
 $theme-search-min-width:              27ch;
 
 // Sidenav
-$theme-sidenav-current-border-width:  0.5;
+$theme-sidenav-current-border-width:  .5;
 $theme-sidenav-font-family:           'ui';

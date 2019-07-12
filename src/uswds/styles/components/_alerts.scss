@@ -85,7 +85,7 @@ $padding-left: units($theme-alert-padding-x) + units($theme-alert-bar-width);
 
 .usa-alert__text:only-child {
   margin-bottom: units($theme-alert-bar-width);
-  padding-top: units(0.5);
+  padding-top: units(.5);
 }
 
 @each $name, $bgcolor in $alerts {
@@ -114,8 +114,8 @@ $padding-left: units($theme-alert-padding-x) + units($theme-alert-bar-width);
   }
 
   .usa-alert__text:only-child {
-    margin-bottom: units(0.5);
-    padding-top: units(0.5);
+    margin-bottom: units(.5);
+    padding-top: units(.5);
   }
 }
 

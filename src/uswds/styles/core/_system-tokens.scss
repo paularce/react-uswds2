@@ -35,7 +35,7 @@ $system-spacing:(
     '2px':                    2px,
   ),
   small: (
-    '05':                     spacing-multiple(0.5),  // 4px
+    '05':                     spacing-multiple(.5),  // 4px
     1:                        spacing-multiple(1),   // 8px
     '105':                    spacing-multiple(1.5), // 12px
     2:                        spacing-multiple(2),   // 16px
@@ -47,7 +47,7 @@ $system-spacing:(
     '#{$neg-prefix}-2px':     -2px,
   ),
   small-negative: (
-    '#{$neg-prefix}-05':      spacing-multiple(-0.5),  // -4px
+    '#{$neg-prefix}-05':      spacing-multiple(-.5),  // -4px
     '#{$neg-prefix}-1':       spacing-multiple(-1),   // -8px
     '#{$neg-prefix}-105':     spacing-multiple(-1.5), // -12px
     '#{$neg-prefix}-2':       spacing-multiple(-2),   // -16px
@@ -438,31 +438,31 @@ Colors
 
 $system-color-black-transparent: (
   'black-transparent': (
-    5 :     rgba(0, 0, 0, 0.01),
-    10:     rgba(0, 0, 0, 0.1),
-    20:     rgba(0, 0, 0, 0.2),
-    30:     rgba(0, 0, 0, 0.3),
-    40:     rgba(0, 0, 0, 0.4),
-    50:     rgba(0, 0, 0, 0.5),
-    60:     rgba(0, 0, 0, 0.6),
-    70:     rgba(0, 0, 0, 0.7),
-    80:     rgba(0, 0, 0, 0.8),
-    90:     rgba(0, 0, 0, 0.9),
+    5 :     rgba(0, 0, 0, .01),
+    10:     rgba(0, 0, 0, .1),
+    20:     rgba(0, 0, 0, .2),
+    30:     rgba(0, 0, 0, .3),
+    40:     rgba(0, 0, 0, .4),
+    50:     rgba(0, 0, 0, .5),
+    60:     rgba(0, 0, 0, .6),
+    70:     rgba(0, 0, 0, .7),
+    80:     rgba(0, 0, 0, .8),
+    90:     rgba(0, 0, 0, .9),
   ),
 );
 
 $system-color-white-transparent: (
   'white-transparent': (
-    5 :     rgba(255, 255, 255, 0.01),
-    10:     rgba(255, 255, 255, 0.1),
-    20:     rgba(255, 255, 255, 0.2),
-    30:     rgba(255, 255, 255, 0.3),
-    40:     rgba(255, 255, 255, 0.4),
-    50:     rgba(255, 255, 255, 0.5),
-    60:     rgba(255, 255, 255, 0.6),
-    70:     rgba(255, 255, 255, 0.7),
-    80:     rgba(255, 255, 255, 0.8),
-    90:     rgba(255, 255, 255, 0.9),
+    5 :     rgba(255, 255, 255, .01),
+    10:     rgba(255, 255, 255, .1),
+    20:     rgba(255, 255, 255, .2),
+    30:     rgba(255, 255, 255, .3),
+    40:     rgba(255, 255, 255, .4),
+    50:     rgba(255, 255, 255, .5),
+    60:     rgba(255, 255, 255, .6),
+    70:     rgba(255, 255, 255, .7),
+    80:     rgba(255, 255, 255, .8),
+    90:     rgba(255, 255, 255, .9),
   ),
 );
 

@@ -159,7 +159,7 @@
   margin-top: 0;
 
   @include at-media('mobile-lg') {
-    @include u-margin-y(0.5);
+    @include u-margin-y(.5);
   }
 }
 

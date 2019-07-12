@@ -74,7 +74,7 @@ $nav-link-arrow-icon-size: 1;
     z-index: z-index(500);
 
     &.is-visible {
-      animation: slidein-left 0.3s ease-in-out;
+      animation: slidein-left .3s ease-in-out;
       display: flex;
     }
   }
@@ -254,19 +254,19 @@ $nav-link-arrow-icon-size: 1;
   @include at-media($theme-navigation-width) {
     float: right;
     line-height: line-height($theme-navigation-font-family, 1);
-    margin-bottom: units(0.5);
+    margin-bottom: units(.5);
     margin-top: 0;
   }
 
   .usa-nav__secondary-item {
     @include at-media($theme-navigation-width) {
       display: inline;
-      padding-left: units(0.5);
+      padding-left: units(.5);
 
       & + .usa-nav__secondary-item::before {
         color: color('base-lighter');
         content: '|';
-        padding-right: units(0.5);
+        padding-right: units(.5);
       }
     }
   }

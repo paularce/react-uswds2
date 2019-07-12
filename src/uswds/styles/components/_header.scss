@@ -3,7 +3,7 @@
 
 @mixin nav-border-extended {
   @include add-bar(
-    0.5,
+    .5,
     'primary',
     'bottom',
     0,
@@ -13,12 +13,12 @@
 
 @mixin nav-border-basic {
   @include add-bar(
-    0.5,
+    .5,
     'primary',
     'bottom',
     0,
     2,
-    -0.5
+    -.5
   );
 }
 
@@ -137,7 +137,7 @@ $z-index-overlay: 400;
   position: fixed;
   background: color('black');
   opacity: opacity(0);
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
   visibility: hidden;
   z-index: z-index($z-index-overlay);
 
@@ -160,7 +160,7 @@ $z-index-overlay: 400;
     .usa-nav {
       @include u-flex('row', 'align-center', 'justify-end');
       display: flex;
-      padding: 0 0 units(0.5) units(1);
+      padding: 0 0 units(.5) units(1);
       width: 100%;
     }
 

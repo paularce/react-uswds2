@@ -4,7 +4,7 @@
   @include u-text('white', 'uppercase');
   background-color: color('base-dark');
   border-radius: radius('sm');
-  margin-right: units(0.5);
+  margin-right: units(.5);
   padding: units(1px) units(1);
 
   &:only-of-type {
