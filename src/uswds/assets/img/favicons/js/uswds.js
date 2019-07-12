@@ -1915,9 +1915,6 @@ module.exports = function (context) {
 
   var tabEventHandler = tabHandler(context);
 
-  //  TODO: In the future, loop over additional keybindings and pass an array
-  // of functions, if necessary, to the map keys. Then people implementing
-  // the focus trap could pass callbacks to fire when tabbing
   var keyMappings = keymap(assign({
     Tab: tabEventHandler.tabAhead,
     'Shift+Tab': tabEventHandler.tabBack
@@ -1927,8 +1924,6 @@ module.exports = function (context) {
     keydown: keyMappings
   }, {
     init: function init() {
-      // TODO: is this desireable behavior? Should the trap always do this by default or should
-      // the component getting decorated handle this?
       tabEventHandler.firstTabStop.focus();
     },
     update: function update(isActive) {
@@ -1963,24 +1958,10 @@ module.exports = isElementInViewport;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-/**
- * @name isElement
- * @desc returns whether or not the given argument is a DOM element.
- * @param {any} value
- * @return {boolean}
- */
 var isElement = function isElement(value) {
   return value && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && value.nodeType === 1;
 };
 
-/**
- * @name select
- * @desc selects elements from the DOM by class selector or ID selector.
- * @param {string} selector - The selector to traverse the DOM with.
- * @param {Document|HTMLElement?} context - The context to traverse the DOM
- *   in. If not provided, it defaults to the document.
- * @return {HTMLElement[]} - An array of DOM nodes or an empty array.
- */
 module.exports = function (selector, context) {
   if (typeof selector !== 'string') {
     return [];
@@ -1997,11 +1978,6 @@ module.exports = function (selector, context) {
 },{}],36:[function(require,module,exports){
 'use strict';
 
-/**
- * Flips given INPUT elements between masked (hiding the field value) and unmasked
- * @param {Array.HTMLElement} fields - An array of INPUT elements
- * @param {Boolean} mask - Whether the mask should be applied, hiding the field value
- */
 module.exports = function (field, mask) {
   field.setAttribute('autocapitalize', 'off');
   field.setAttribute('autocorrect', 'off');
@@ -2019,30 +1995,13 @@ var PRESSED = 'aria-pressed';
 var SHOW_ATTR = 'data-show-text';
 var HIDE_ATTR = 'data-hide-text';
 
-/**
- * Replace the word "Show" (or "show") with "Hide" (or "hide") in a string.
- * @param {string} showText
- * @return {strong} hideText
- */
 var getHideText = function getHideText(showText) {
   return showText.replace(/\bShow\b/i, function (show) {
     return (show[0] === 'S' ? 'H' : 'h') + 'ide';
   });
 };
 
-/**
- * Component that decorates an HTML element with the ability to toggle the
- * masked state of an input field (like a password) when clicked.
- * The ids of the fields to be masked will be pulled directly from the button's
- * `aria-controls` attribute.
- *
- * @param  {HTMLElement} el    Parent element containing the fields to be masked
- * @return {boolean}
- */
 module.exports = function (el) {
-  // this is the *target* state:
-  // * if the element has the attr and it's !== "true", pressed is true
-  // * otherwise, pressed is false
   var pressed = el.hasAttribute(PRESSED) && el.getAttribute(PRESSED) !== 'true';
 
   var fields = resolveIdRefs(el.getAttribute(CONTROLS));

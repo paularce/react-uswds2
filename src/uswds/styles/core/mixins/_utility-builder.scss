@@ -96,12 +96,6 @@ loop
 Build a utility from values calculated
 in the @render-utilities-in loop
 ----------------------------------------
-TODO: Determine the proper use of
-unquote() in the following. Changed to
-account for a 'interpolation near
-operators will be simplified in a
-future version of Sass' warning.
-----------------------------------------
 */
 
 @mixin render-utility($utility, $selector, $property, $value, $val-props) {

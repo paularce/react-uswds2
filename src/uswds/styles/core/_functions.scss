@@ -703,7 +703,6 @@ variable that is, itself, a list
   //    in the theme colors map:
   //      'darkest': get-system-color($theme-color-primary.'darkest'),
   //      'darkest': false, // is the desired outcome
-  // TODO: should a false-pass color function be a separate fn?
 
   @if not $color-family {
     @return false;
@@ -895,7 +894,6 @@ functions and mixins.
     @return map-get($our-extended-values, $quoted-value);
   }
 
-  // TODO: what are these last two cases? Evaluate.
   @if not (type-of($value) == 'number' and not unitless($value)) {
     @error '`#{$value}` is not a valid `#{$property}` token. '
       + 'You should correct this. Standard `#{$property}` tokens: '

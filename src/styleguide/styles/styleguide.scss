@@ -72,7 +72,6 @@ $theme-image-path: '../../uswds/assets/img';
 
     & + .usa-sidenav__item {
       a {
-        // TODO: use 'black-transparent-5' when value changes
         border-top: units(1px) solid rgba(0, 0, 0, .05);
       }
     }

@@ -81,7 +81,6 @@ $accordion-border: units($theme-accordion-border-width) solid color($theme-accor
 
 .usa-accordion__heading,
 // kludge to override .usa-prose styles
-// TODO: work this into a mixin
 .usa-prose .usa-accordion__heading {
   @include typeset($theme-accordion-font-family, $theme-body-font-size, 1);
   margin: 0;

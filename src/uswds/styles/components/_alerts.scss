@@ -1,5 +1,4 @@
 // Alert variables ---------- //
-// TODO: Custom alerts are effectively hidden and not well supported
 // Consider removing or rebuilding
 $usa-custom-alerts: () !default;
 $usa-custom-alerts-bar: () !default;
@@ -39,7 +38,6 @@ $padding-left: units($theme-alert-padding-x) + units($theme-alert-bar-width);
     margin-top: units(2);
   }
 
-  // TODO: why is this not simply a border?
   &::before {
     background-color: color('base-light');
     content: '';

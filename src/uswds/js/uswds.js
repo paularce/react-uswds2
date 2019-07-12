@@ -1915,9 +1915,6 @@ module.exports = function (context) {
 
   var tabEventHandler = tabHandler(context);
 
-  //  TODO: In the future, loop over additional keybindings and pass an array
-  // of functions, if necessary, to the map keys. Then people implementing
-  // the focus trap could pass callbacks to fire when tabbing
   var keyMappings = keymap(assign({
     Tab: tabEventHandler.tabAhead,
     'Shift+Tab': tabEventHandler.tabBack
@@ -1927,8 +1924,6 @@ module.exports = function (context) {
     keydown: keyMappings
   }, {
     init: function init() {
-      // TODO: is this desireable behavior? Should the trap always do this by default or should
-      // the component getting decorated handle this?
       tabEventHandler.firstTabStop.focus();
     },
     update: function update(isActive) {

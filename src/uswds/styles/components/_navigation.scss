@@ -20,7 +20,6 @@ $sliding-panel-width: 'card-lg';
 $nav-link-accordion-icon-size: 1.5;
 $nav-link-arrow-icon-size: 1;
 
-// TODO: Collect animations in a common location?
 @keyframes slidein-left {
   from {
     transform: translateX(units($sliding-panel-width));

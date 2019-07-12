@@ -154,7 +154,7 @@ $z-index-overlay: 400;
   @include at-media($theme-navigation-width) {
     .usa-navbar {
       position: relative;
-      width: $theme-megamenu-logo-text-width; // TODO: review this more
+      width: $theme-megamenu-logo-text-width; 
     }
 
     .usa-nav {
