@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import InputLabel from "./InputLabel";
-import Utilities from "../helpers/utilities";
+import React from 'react';
+import PropTypes from 'prop-types';
+import InputLabel from './InputLabel';
+import Utilities from '../helpers/utilities';
 
 /**
- * Class representing a label and a input of type="text"
+ * Class representing a label and a input of type='text'
  *
  * Required props:
  * - label: Sets the text for the input's label
@@ -26,16 +26,16 @@ export default class TextInput extends React.Component {
     label: PropTypes.string.isRequired,
     labelHint: PropTypes.string,
     type: PropTypes.oneOf([
-      "text",
-      "email",
-      "password",
-      "search",
-      "url",
-      "date",
-      "month",
-      "tel",
-      "week",
-      "number"
+      'text',
+      'email',
+      'password',
+      'search',
+      'url',
+      'date',
+      'month',
+      'tel',
+      'week',
+      'number'
     ]),
     classes: PropTypes.string,
     required: PropTypes.bool,
@@ -48,8 +48,8 @@ export default class TextInput extends React.Component {
   };
 
   static defaultProps = {
-    classes: "",
-    type: "text",
+    classes: '',
+    type: 'text',
     enableSpellCheck: false,
     required: false
   };
@@ -74,7 +74,7 @@ export default class TextInput extends React.Component {
     }
 
     this.state = {
-      value: this.props.value || "",
+      value: this.props.value || '',
       isPristine: pristine,
       isValid: this.props.isValid ? true : false,
       hasError: this.props.errorMessage ? true : false,
@@ -112,7 +112,7 @@ export default class TextInput extends React.Component {
     let error = null;
     if (this.state.hasError) {
       error = (
-        <span className="usa-error-message" role="alert">
+        <span className='usa-error-message' role='alert'>
           {this.state.errorMessage}
         </span>
       );
@@ -132,7 +132,7 @@ export default class TextInput extends React.Component {
           name={this.props.id}
           type={this.props.type}
           value={this.state.value}
-          className={`usa-input ${this.props.classes} ${this.state.isValid ? "usa-input--success" : null}`}
+          className={`usa-input ${this.props.classes} ${this.state.isValid ? 'usa-input--success' : null}`}
           required={this.props.required}
           aria-required={this.props.required}
           aria-labelledby={`${this.props.id}-label`}
@@ -155,7 +155,7 @@ export default class TextInput extends React.Component {
         this.setState({
           hasError: true,
           isValid: false,
-          errorMessage: "This field is required"
+          errorMessage: 'This field is required'
         });
       } else {
         // is empty so reset isValid and hasError

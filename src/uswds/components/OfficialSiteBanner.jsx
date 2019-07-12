@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import  flagSmall from '../assets/img/us_flag_small.png';
 import dotgov from '../assets/img/icon-dot-gov.svg';
@@ -38,23 +38,23 @@ export default class OfficialSiteBanner extends React.Component {
 
   /**
    * Renders the content of the accordion that expands when the user clicks
-   * on the "Here's how you know" link.
+   * on the 'Here's how you know' link.
    *
    * @returns {Node|String} The rendered DOM node or an empty string.
    */
   renderContent() {
     return (
           <div
-            className="usa-banner__content usa-accordion__content"
-            id="gov-banner"
+            className='usa-banner__content usa-accordion__content'
+            id='gov-banner'
             hidden>
-            <div className="grid-row grid-gap-lg">
-              <div className="usa-banner__guidance tablet:grid-col-6">
+            <div className='grid-row grid-gap-lg'>
+              <div className='usa-banner__guidance tablet:grid-col-6'>
                 <img
-                  className="usa-banner__icon usa-media-block__img"
+                  className='usa-banner__icon usa-media-block__img'
                   src={dotgov}
-                  alt="Dot gov" />
-                <div className="usa-media-block__body">
+                  alt='Dot gov' />
+                <div className='usa-media-block__body'>
                   <p>
                     <strong>The .gov means it’s official.</strong>
                     <br />
@@ -64,12 +64,12 @@ export default class OfficialSiteBanner extends React.Component {
                   </p>
                 </div>
               </div>
-              <div className="usa-banner__guidance tablet:grid-col-6">
+              <div className='usa-banner__guidance tablet:grid-col-6'>
                 <img
-                  className="usa-banner__icon usa-media-block__img"
+                  className='usa-banner__icon usa-media-block__img'
                   src={iconHttps}
-                  alt="Https" />
-                <div className="usa-media-block__body">
+                  alt='Https' />
+                <div className='usa-media-block__body'>
                   <p>
                     <strong>The site is secure.</strong>
                     <br />
@@ -91,30 +91,30 @@ export default class OfficialSiteBanner extends React.Component {
    */
   render() {
     return (
-      <div className="site-banner usa-banner">
-        <div className="usa-accordion">
-          <header className="usa-banner__header">
-            <div className="usa-banner__inner">
-              <div className="grid-col-auto">
+      <div className='site-banner usa-banner'>
+        <div className='usa-accordion'>
+          <header className='usa-banner__header'>
+            <div className='usa-banner__inner'>
+              <div className='grid-col-auto'>
                 <img
-                  className="usa-banner__header-flag"
+                  className='usa-banner__header-flag'
                   src={flagSmall}
-                  alt="U.S. flag" />
+                  alt='U.S. flag' />
               </div>
-              <div className="grid-col-fill tablet:grid-col-auto">
-                <p className="usa-banner__header-text">
+              <div className='grid-col-fill tablet:grid-col-auto'>
+                <p className='usa-banner__header-text'>
                   An official website of the United States government
                 </p>
-                <p className="usa-banner__header-action" aria-hidden="true">
+                <p className='usa-banner__header-action' aria-hidden='true'>
                   Here’s how you know
                 </p>
               </div>
               <button
-                className="usa-accordion__button usa-banner__button"
-                aria-expanded="false"
-                aria-controls="gov-banner"
+                className='usa-accordion__button usa-banner__button'
+                aria-expanded='false'
+                aria-controls='gov-banner'
                 onClick={this.toggleDetails}>
-                <span className="usa-banner__button-text">
+                <span className='usa-banner__button-text'>
                   Here's how you know
                 </span>
               </button>

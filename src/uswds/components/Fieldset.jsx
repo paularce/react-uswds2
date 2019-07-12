@@ -22,7 +22,7 @@ export default function Fieldset(props) {
   const legendType = props.legendHidden ? 'usa-sr-only' : 'usa-legend';
 
   return (
-    <fieldset className="usa-fieldset" {...otherProps}>
+    <fieldset className='usa-fieldset' {...otherProps}>
       <legend className={legendType}>
         {legend}
       </legend>

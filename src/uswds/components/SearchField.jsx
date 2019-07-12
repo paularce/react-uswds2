@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
@@ -35,22 +35,22 @@ export default class SearchField extends React.Component
   {
     let buttonContents;
     if (this.props.size === 'small') {
-      buttonContents = (<span className="usa-sr-only">Search</span>);
+      buttonContents = (<span className='usa-sr-only'>Search</span>);
     }
     else {
-      buttonContents = (<span className="usa-search__submit-text">Search</span>);
+      buttonContents = (<span className='usa-search__submit-text'>Search</span>);
     }
     
     return (
       <form className={`usa-search ${this.props.size? 'usa-search--' + this.props.size : ''}`}>
-        <div role="search">
-          <label className="usa-sr-only" htmlFor={this.props.id}>Search</label>
+        <div role='search'>
+          <label className='usa-sr-only' htmlFor={this.props.id}>Search</label>
           <input 
-            type="search"
-            className="usa-input"
+            type='search'
+            className='usa-input'
             name={this.props.id}
             id={this.props.id} />
-          <button className="usa-button" type="submit">
+          <button className='usa-button' type='submit'>
             {buttonContents}
           </button>
         </div>

@@ -34,14 +34,14 @@ export default class Radio extends React.Component {
     return (
       <div className={`usa-radio ${className}`}>
         <input
-          className="usa-radio__input"
-          type="radio"
+          className='usa-radio__input'
+          type='radio'
           disabled={disabled}
           aria-disabled={disabled}
           id={id}
           value={value ? value : id}
           {...otherProps}/>
-        <label className="usa-radio__label" htmlFor={id}>{label}</label>
+        <label className='usa-radio__label' htmlFor={id}>{label}</label>
       </div>
     );
   }

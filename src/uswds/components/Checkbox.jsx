@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Utilities from "../helpers/utilities";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Utilities from '../helpers/utilities';
 
 /**
  * Checkbox with label
@@ -28,9 +28,9 @@ export default class Checkbox extends React.Component {
   };
   
   static defaultProps = {
-    classes: "",
+    classes: '',
     defaultChecked: false,
-    name: "checkboxes"
+    name: 'checkboxes'
   };
 
   /**
@@ -60,13 +60,13 @@ export default class Checkbox extends React.Component {
       <div className={`usa-checkbox ${classes}`}>
         <input
           id={id}
-          className="usa-checkbox__input"
-          type="checkbox"
+          className='usa-checkbox__input'
+          type='checkbox'
           name={name}
           value={value ? value : id}
           disabled={disabled || false}
           {...otherProps}/>
-        <label className="usa-checkbox__label" htmlFor={id}>
+        <label className='usa-checkbox__label' htmlFor={id}>
           {label}
         </label>
       </div>

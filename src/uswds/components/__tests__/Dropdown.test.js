@@ -12,9 +12,9 @@ describe('Dropdown', () => {
   beforeEach(function() {
     wrapper = mount(
       <Dropdown label={labelText}>
-        <option value="value1">Option A</option>
-        <option value="value2">Option B</option>
-        <option value="value3">Option C</option>
+        <option value='value1'>Option A</option>
+        <option value='value2'>Option B</option>
+        <option value='value3'>Option C</option>
       </Dropdown>);
   });
 
@@ -44,9 +44,9 @@ describe('Dropdown', () => {
   it('accepts a value property', () => {
     const testValue = 'testing';
     wrapper = mount(<Dropdown value={testValue} label={labelText}>
-      <option value="value1">Option A</option>
-      <option value="value2">Option B</option>
-      <option value="value3">Option C</option>
+      <option value='value1'>Option A</option>
+      <option value='value2'>Option B</option>
+      <option value='value3'>Option C</option>
     </Dropdown>);
     const value = wrapper.find('select').props().value;
     expect(value).toBe(testValue);
@@ -54,9 +54,9 @@ describe('Dropdown', () => {
 
   it('accepts the required property', () => {
     wrapper = mount(<Dropdown required label={labelText}>
-      <option value="value1">Option A</option>
-      <option value="value2">Option B</option>
-      <option value="value3">Option C</option>
+      <option value='value1'>Option A</option>
+      <option value='value2'>Option B</option>
+      <option value='value3'>Option C</option>
     </Dropdown>);
     expect(wrapper.find('label').hasClass('usa-label--required')).toBe(true);
   });
@@ -64,9 +64,9 @@ describe('Dropdown', () => {
   it('displays the error message when present', () => {
     const message = 'error message';
     wrapper = mount(<Dropdown errorMessage={message} label={labelText}>
-      <option value="value1">Option A</option>
-      <option value="value2">Option B</option>
-      <option value="value3">Option C</option>
+      <option value='value1'>Option A</option>
+      <option value='value2'>Option B</option>
+      <option value='value3'>Option C</option>
     </Dropdown>);
     expect(wrapper.find('.usa-error-message').text()).toBe(message);
   });
@@ -74,9 +74,9 @@ describe('Dropdown', () => {
   it('handles onChange event', () => {
     const testValue = 'value3';
     wrapper = mount(<Dropdown value={'value1'} label={labelText}>
-      <option value="value1">Option A</option>
-      <option value="value2">Option B</option>
-      <option value="value3">Option C</option>
+      <option value='value1'>Option A</option>
+      <option value='value2'>Option B</option>
+      <option value='value3'>Option C</option>
     </Dropdown>);
     wrapper.find('select').simulate('change', {target: { value : testValue}});
     expect(wrapper.find('select').props().value).toBe(testValue);

@@ -34,7 +34,7 @@ describe('Tables', () => {
   ];
 
   beforeEach(function() {
-    wrapper = mount(<Table caption="test caption" columns={cols} data={data} />);
+    wrapper = mount(<Table caption='test caption' columns={cols} data={data} />);
   });
 
   it('is defined', () => {
@@ -47,12 +47,12 @@ describe('Tables', () => {
   });
 
   it('has borders by default', () => {
-    wrapper = shallow(<Table caption="test caption" columns={cols} data={data} />);
+    wrapper = shallow(<Table caption='test caption' columns={cols} data={data} />);
     expect(wrapper.hasClass('usa-table--borderless')).toBe(false);
   });
 
   it('accepts the borderless prop', () => {
-    wrapper = shallow(<Table borderless caption="test caption" columns={cols} data={data} />);
+    wrapper = shallow(<Table borderless caption='test caption' columns={cols} data={data} />);
     expect(wrapper.hasClass('usa-table--borderless')).toBe(true);
   });
 

@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import InputLabel from "./InputLabel";
-import Utilities from "../helpers/utilities";
+import React from 'react';
+import PropTypes from 'prop-types';
+import InputLabel from './InputLabel';
+import Utilities from '../helpers/utilities';
 
 /**
  * Class representing a dropdown
@@ -47,7 +47,7 @@ export default class Dropdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: this.props.value || "",
+      value: this.props.value || '',
       hasError: this.props.errorMessage ? true : false,
       errorMessageBody: this.props.errorMessage ? this.props.errorMessage : null
     };
@@ -91,7 +91,7 @@ export default class Dropdown extends React.Component {
     let errorMessage = null;
     if (this.state.hasError) {
       errorMessage = (
-        <span className="usa-error-message" role="alert">
+        <span className='usa-error-message' role='alert'>
           {this.state.errorMessageBody}
         </span>
       );
@@ -99,9 +99,9 @@ export default class Dropdown extends React.Component {
 
     let emptyPlaceholder = null;
 
-    if (this.state.value === "") {
+    if (this.state.value === '') {
       emptyPlaceholder = (
-        <option disabled value="">
+        <option disabled value=''>
           Select ...
         </option>
       );
@@ -117,7 +117,7 @@ export default class Dropdown extends React.Component {
         {errorMessage}
 
         <select
-          className="usa-select"
+          className='usa-select'
           name={this.props.id}
           id={this.id}
           value={this.state.value}

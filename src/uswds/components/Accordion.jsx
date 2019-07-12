@@ -1,8 +1,8 @@
 /* eslint-disable no-throw-literal */
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import utilities from "../helpers/utilities.js";
+import utilities from '../helpers/utilities.js';
 
 /**
  * Provides a standard accordion component.
@@ -82,7 +82,7 @@ export class Accordion extends React.Component {
       if (child.props.expanded) {
         if (foundExpandedItem) {
           console.warn(
-            "Only one AccordionItem can be expanded at a time. You have marked more than one for expansion by default."
+            'Only one AccordionItem can be expanded at a time. You have marked more than one for expansion by default.'
           ); // eslint-disable-line no-console
         }
         this.setState({ activeIndex: i });
@@ -126,7 +126,7 @@ export class Accordion extends React.Component {
     return (
       <div
         className={`usa-accordion ${
-          this.props.bordered ? "usa-accordion--bordered" : ""
+          this.props.bordered ? 'usa-accordion--bordered' : ''
         }`}
       >
         {children}
@@ -161,7 +161,7 @@ export class Accordion extends React.Component {
  *
  * Example:
  * <code>
- *   <AccordionItem title="First Amendment">
+ *   <AccordionItem title='First Amendment'>
  *     <p>Congress shall make no law respecting an establishment of ...</p>
  *   </AccordionItem>
  *   <AccordionItem>
@@ -179,7 +179,7 @@ export class AccordionItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      uuid: ""
+      uuid: ''
     };
   }
 
@@ -194,7 +194,7 @@ export class AccordionItem extends React.Component {
   static defaultProps = {
     action: function() {},
     expanded: false,
-    title: ""
+    title: ''
   };
 
   /**
@@ -250,15 +250,15 @@ export class AccordionItem extends React.Component {
       element = <span>{this.props.title}</span>;
     } else {
       if (React.Children.count(this.props.children) !== 2) {
-        throw "Either a title or 2 child elements must be supplied.";
+        throw 'Either a title or 2 child elements must be supplied.';
       }
       let children = React.Children.toArray(this.props.children);
       element = children[0];
     }
     return (
-      <h2 className="usa-accordion__heading">
+      <h2 className='usa-accordion__heading'>
         <button
-          className="usa-accordion__button"
+          className='usa-accordion__button'
           aria-expanded={this.props.expanded}
           aria-controls={`${this.state.uuid}-content`}
           onClick={this.makeActive}>
@@ -278,14 +278,14 @@ export class AccordionItem extends React.Component {
     // If `this.state.expanded` is set to false then don't render the
     // content element.
     if (!this.props.expanded) {
-      return "";
+      return '';
     }
     let children = React.Children.toArray(this.props.children);
     let element = children.length === 2 ? children[1] : children[0];
     return (
       <div
         id={`${this.state.uuid}-content`}
-        className="usa-accordion__content usa-prose">
+        className='usa-accordion__content usa-prose'>
         {element}
       </div>
     );
@@ -299,7 +299,7 @@ export class AccordionItem extends React.Component {
   render() {
     // Ensure there are only 2 children.
     if (React.Children.count(this.props.children) > 2) {
-      throw "AccordionItem elements must have no more than 2 children.";
+      throw 'AccordionItem elements must have no more than 2 children.';
     }
 
     return (

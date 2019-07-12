@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink as RRLink } from "react-router-dom";
+import React from 'react';
+import { NavLink as RRLink } from 'react-router-dom';
 
 /**
  * Represents a generic link element.
@@ -8,7 +8,7 @@ import { NavLink as RRLink } from "react-router-dom";
  * props supported by that class.
  *
  * If no `activeClassName` is defined, this class will set it to the default 
- * value of "usa-current" per the U.S. Web Design Standards.
+ * value of 'usa-current' per the U.S. Web Design Standards.
  */
 export default class Link extends React.Component
 {
@@ -21,7 +21,7 @@ export default class Link extends React.Component
   {
     let props = Object.assign({}, this.props);
     if (!props.activeClassName) {
-      props.activeClassName = "usa-current";
+      props.activeClassName = 'usa-current';
     }
     return (
       <RRLink {...props} />

@@ -28,12 +28,12 @@ describe('Button', () => {
   });
 
   it('is has a active class', () => {
-    buttonItem = shallow(<Button text={text} status="active" />);
+    buttonItem = shallow(<Button text={text} status='active' />);
     expect(buttonItem.hasClass('usa-button--active')).toBe(true);
   });
 
   it('is has a hover class', () => {
-    buttonItem = shallow(<Button text={text} status="hover" />);
+    buttonItem = shallow(<Button text={text} status='hover' />);
     expect(buttonItem.hasClass('usa-button--hover')).toBe(true);
   });
 
@@ -44,7 +44,7 @@ describe('Button', () => {
   });
 
   it('is has a big class', () => {
-    buttonItem = shallow(<Button text={text} size="big" />);
+    buttonItem = shallow(<Button text={text} size='big' />);
     expect(buttonItem.hasClass('usa-button--big')).toBe(true);
   });
 

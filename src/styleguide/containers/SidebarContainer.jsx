@@ -1,8 +1,4 @@
 import React from "react";
-import { DocsPage, DocsComponent, DocsSection, DocsExample, DocsPreview } from './Docs.jsx';
-import Highlight from 'react-highlight';
-import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
-import Tag from '../../uswds/components/Tag';
 
 /**
  * Displays the Styleguide content for Sidebars.

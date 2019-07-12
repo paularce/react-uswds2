@@ -12,8 +12,8 @@ describe('Form', () => {
   it('should render correctly', () => {
     const component = shallow(
     <Form>
-      <Fieldset legend="Name">
-      <TextInput id="last-name" label="Last name" />
+      <Fieldset legend='Name'>
+      <TextInput id='last-name' label='Last name' />
       </Fieldset>
     </Form>
     );

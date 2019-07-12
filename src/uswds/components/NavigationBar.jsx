@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
@@ -24,10 +24,10 @@ export default class NavigationBar extends React.Component
   render()
   {
     return (
-      <nav role="navigation" className="usa-nav">
-        <div className="usa-nav-inner">
-          <button className="usa-nav-close">
-            <img src="/assets/images/close.svg" alt="close" />
+      <nav role='navigation' className='usa-nav'>
+        <div className='usa-nav-inner'>
+          <button className='usa-nav-close'>
+            <img src='/assets/images/close.svg' alt='close' />
           </button>
           {this.props.children}
         </div>
@@ -36,8 +36,8 @@ export default class NavigationBar extends React.Component
   }
 }
 
-NavigationBar.LAYOUT_BASIC    = "usa-search--big";
-NavigationBar.LAYOUT_EXTENDED = "usa-search--medium";
+NavigationBar.LAYOUT_BASIC    = 'usa-search--big';
+NavigationBar.LAYOUT_EXTENDED = 'usa-search--medium';
 
 NavigationBar.propTypes = {
   layout: PropTypes.oneOf([ 
