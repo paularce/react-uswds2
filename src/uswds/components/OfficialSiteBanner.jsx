@@ -4,24 +4,18 @@ import  flagSmall from '../assets/img/us_flag_small.png';
 import dotgov from '../assets/img/icon-dot-gov.svg';
 import iconHttps from '../assets/img/icon-https.svg';
 
-/**
- * Renders the standard official site banner indicating that this site is an
- * official government site.
- *
- * This component is usually rendered in the common {@link Header}. You should
- * only need to add this manually if you are implementing your own header.
- * In that case, this should be the element that is at the very top of the
- * window.
- *
- * For more information, please consult the
- * [U.S. Web Design Standards](https://standards.usa.gov).
- */
+//  Renders the standard official site banner indicating that this site is an
+//  official government site.
+// 
+//  This component is usually rendered in the common {@link Header}. You should
+//  only need to add this manually if you are implementing your own header.
+//  In that case, this should be the element that is at the very top of the
+//  window.
+// 
+//  For more information, please consult the
+//  [U.S. Web Design Standards](https://standards.usa.gov).
+ 
 export default class OfficialSiteBanner extends React.Component {
-  /**
-   * Constructor.
-   *
-   * @param {Object} props The props that will be applied to this component.
-   */
   constructor(props) {
     super(props);
     this.state = {
@@ -29,19 +23,14 @@ export default class OfficialSiteBanner extends React.Component {
     };
   }
 
-  /**
-   * Toggles the visiblity of the content section.
-   */
+  // Toggles the visiblity of the content section.
   toggleDetails = () => {
     this.setState({ contentVisible: !this.state.contentVisible });
   }
 
-  /**
-   * Renders the content of the accordion that expands when the user clicks
-   * on the 'Here's how you know' link.
-   *
-   * @returns {Node|String} The rendered DOM node or an empty string.
-   */
+  //  * Renders the content of the accordion that expands when the user clicks
+  //  * on the 'Here's how you know' link.
+ 
   renderContent() {
     return (
           <div
@@ -84,11 +73,6 @@ export default class OfficialSiteBanner extends React.Component {
     );
   }
 
-  /**
-   * Renders the component.
-   *
-   * @returns {Node|null} The rendered DOM node.
-   */
   render() {
     return (
       <div className='site-banner usa-banner'>

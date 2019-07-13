@@ -4,9 +4,6 @@ import Highlight from 'react-highlight';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/components/Tables';
 import Tag from '../../uswds/components/Tag';
 
-/**
- * Displays the Styleguide content for Tables.
- */
 export default function TablesContainer() {
   const cols = [
     {

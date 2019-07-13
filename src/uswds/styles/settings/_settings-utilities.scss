@@ -1,34 +1,30 @@
-/*
-* * * * * ==============================
-* * * * * ==============================
-* * * * * ==============================
-* * * * * ==============================
-========================================
-========================================
-========================================
-----------------------------------------
-USWDS 2.0.3
-----------------------------------------
-UTILITIES SETTINGS
-----------------------------------------
-Read more about settings and
-USWDS utilities in the documentation:
-https://v2.designsystem.digital.gov/utilities
-----------------------------------------
-*/
+// * * * * * ==============================
+// * * * * * ==============================
+// * * * * * ==============================
+// * * * * * ==============================
+// ========================================
+// ========================================
+// ========================================
+// ----------------------------------------
+// USWDS 2.0.3
+// ----------------------------------------
+// UTILITIES SETTINGS
+// ----------------------------------------
+// Read more about settings and
+// USWDS utilities in the documentation:
+// https://v2.designsystem.digital.gov/utilities
+// ----------------------------------------
 
 $utilities-use-important:     false !default;
 $output-all-utilities:        true !default;
 
-/*
-----------------------------------------
-Utility breakpoints
-----------------------------------------
-Which breakpoints does your project
-need? Select as `true` any breakpoint
-used by utilities or layout grid
-----------------------------------------
-*/
+// ----------------------------------------
+// Utility breakpoints
+// ----------------------------------------
+// Which breakpoints does your project
+// need? Select as `true` any breakpoint
+// used by utilities or layout grid
+// ----------------------------------------
 
 $theme-utility-breakpoints: (
   'card':             false,   // 160px
@@ -42,27 +38,23 @@ $theme-utility-breakpoints: (
   'widescreen':       false,   // 1400px
 ) !default;
 
-/*
-----------------------------------------
-Global colors
-----------------------------------------
-The following palettes will be added to
-- background-color
-- border-color
-- color
-- text-decoration-color
-----------------------------------------
-*/
+// ----------------------------------------
+// Global colors
+// ----------------------------------------
+// The following palettes will be added to
+// - background-color
+// - border-color
+// - color
+// - text-decoration-color
+// ----------------------------------------
 
 $global-color-palettes: (
   'palette-color-default'
 ) !default;
 
-/*
-----------------------------------------
-Settings
-----------------------------------------
-*/
+// ----------------------------------------
+// Settings
+// ----------------------------------------
 
 $add-aspect-settings: (
   output:       true,
@@ -568,11 +560,9 @@ $z-index-settings: (
   visited:      false
 ) !default;
 
-/*
-----------------------------------------
-Values
-----------------------------------------
-*/
+// ----------------------------------------
+// Values
+// ----------------------------------------
 
 // .add-aspect
 

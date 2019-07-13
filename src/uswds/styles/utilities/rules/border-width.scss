@@ -1,18 +1,16 @@
-/*
-========================================
-border-width
-----------------------------------------
-usage:
-  .border-[modifier]*-width-[key]
-----------------------------------------
-output:
-  border-[modifier]-width: [value];
-----------------------------------------
-example:
-  .border-top-width-1px {
-    border-top-width: 1px; }
-----------------------------------------
-*/
+// ========================================
+// border-width
+// ----------------------------------------
+// usage:
+//   .border-[modifier]*-width-[key]
+// ----------------------------------------
+// output:
+//   border-[modifier]-width: [value];
+// ----------------------------------------
+// example:
+//   .border-top-width-1px {
+//     border-top-width: 1px; }
+// ----------------------------------------
 
 $u-border-width: (
   border-width: (

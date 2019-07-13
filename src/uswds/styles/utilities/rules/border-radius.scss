@@ -1,21 +1,19 @@
-/*
-========================================
-border-radius
-----------------------------------------
-usage:
-  .border-radius-[key]
-----------------------------------------
-output:
-  border-radius: [value];
-----------------------------------------
-example:
-  .border-radius-0 {
-    border-radius: 0; }
+// ========================================
+// border-radius
+// ----------------------------------------
+// usage:
+//   .border-radius-[key]
+// ----------------------------------------
+// output:
+//   border-radius: [value];
+// ----------------------------------------
+// example:
+//   .border-radius-0 {
+//     border-radius: 0; }
 
-  .border-radius-pill {
-    border-radius: 10em; }
-----------------------------------------
-*/
+//   .border-radius-pill {
+//     border-radius: 10em; }
+// ----------------------------------------
 
 $u-border-radius: (
   border-radius: (

@@ -5,10 +5,10 @@ import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/compone
 import Alert from '../../uswds/components/Alert';
 import Tag from '../../uswds/components/Tag';
 
-/**
- * Displays the Styleguide content for Alerts.
- * @returns {[node]} The rendered DOM node
- */
+
+//  Displays the Styleguide content for Alerts.
+//  @returns {[node]} The rendered DOM node
+
 export default function AlertsContainer () {
   const message = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.';
   const longMessage = (<div><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p><p>Not what you expected? <a href="/">Go back.</a></p></div>);
@@ -16,14 +16,12 @@ export default function AlertsContainer () {
   return (
     <DocsPage title="Alerts">
 
-      {/* Importing */}
       <DocsSection title="Importing">
         <Highlight language="javascript">
           {`import Alert from '%path%/uswds/components/Alert';`}
         </Highlight>
       </DocsSection>
 
-      {/* Props */}
       <DocsSection title="Props">
         <Table columns={['Prop', 'Type', 'Default', 'Description']}>
           <TableRow>
@@ -53,7 +51,6 @@ export default function AlertsContainer () {
         </Table>
       </DocsSection>
 
-      {/* Accessibility */}
       <DocsSection title="Accessibility">
         <p>
           Because of its intrusive nature, the ARIA alert role (role="alert") must be used sparingly and only in situations where the user's immediate attention is required. It's appropriate for instances such as
@@ -68,7 +65,6 @@ export default function AlertsContainer () {
         </p>
       </DocsSection>
 
-      {/* Usage */}
       <DocsSection title="Usage">
         <DocsExample>
           <h4>The alert body can be a string, or if HTML formatting is needed, a React element</h4>

@@ -1,12 +1,11 @@
-/*
-========================================
-FONT PLUGINS
-----------------------------------------
-These plugins collect packaged
-font-related values for inclusion in
-utilities
-----------------------------------------
-*/
+// ========================================
+// FONT PLUGINS
+// ----------------------------------------
+// These plugins collect packaged
+// font-related values for inclusion in
+// utilities
+// ----------------------------------------
+
 
 $palettes-font-misc:(
   'palette-font-family': (
@@ -722,11 +721,9 @@ $palettes-font-theme-types: map-collect(
   $palette-font-theme-types
 );
 
-/*
-----------------------------------------
-role-based theme sizes
-----------------------------------------
-*/
+// ----------------------------------------
+// role-based theme sizes
+// ----------------------------------------
 
 $token-font-theme-code-3xs: (
   code-3xs: (
@@ -1301,11 +1298,9 @@ $palettes-font-theme: map-collect(
   $palette-font-theme
 );
 
-/*
-----------------------------------------
-system font sizes
-----------------------------------------
-*/
+// ----------------------------------------
+// system font sizes
+// ----------------------------------------
 
 $token-font-system-cond-micro: (
   cond-micro: (

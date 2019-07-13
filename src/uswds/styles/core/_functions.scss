@@ -1,8 +1,6 @@
-/*
-========================================
-Functions
-----------------------------------------
-*/
+// ========================================
+// Functions
+// ----------------------------------------
 
 // The following vars need to be set
 // here, before the rest of the system
@@ -20,23 +18,19 @@ $root-font-size-equiv: if(
   $theme-root-font-size
 );
 
-/*
-========================================
-General-purpose functions
-----------------------------------------
-*/
+// ========================================
+// General-purpose functions
+// ----------------------------------------
 
-/*
-----------------------------------------
-map-deep-get()
-----------------------------------------
-@author Hugo Giraudel
-@access public
-@param {Map} $map - Map
-@param {Arglist} $keys - Key chain
-@return {*} - Desired value
-----------------------------------------
-*/
+// ----------------------------------------
+// map-deep-get()
+// ----------------------------------------
+// @author Hugo Giraudel
+// @access public
+// @param {Map} $map - Map
+// @param {Arglist} $keys - Key chain
+// @return {*} - Desired value
+// ----------------------------------------
 
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
@@ -46,16 +40,14 @@ map-deep-get()
   @return $map;
 }
 
-/*
-----------------------------------------
-strip-unit()
-----------------------------------------
-Remove the unit of a length
-@author Hugo Giraudel
-@param {Number} $number - Number to remove unit from
-@return {Number} - Unitless number
-----------------------------------------
-*/
+// ----------------------------------------
+// strip-unit()
+// ----------------------------------------
+// Remove the unit of a length
+// @author Hugo Giraudel
+// @param {Number} $number - Number to remove unit from
+// @return {Number} - Unitless number
+// ----------------------------------------
 
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
@@ -65,13 +57,11 @@ Remove the unit of a length
   @return $number;
 }
 
-/*
-----------------------------------------
-multi-cat()
-----------------------------------------
-Concatenate two lists
-----------------------------------------
-*/
+// ----------------------------------------
+// multi-cat()
+// ----------------------------------------
+// Concatenate two lists
+// ----------------------------------------
 
 @function multi-cat($list1, $list2) {
   $this-list: ();
@@ -86,15 +76,14 @@ Concatenate two lists
   @return $this-list;
 }
 
-/*
-----------------------------------------
-map-collect()
-----------------------------------------
-Collect multiple maps into a single
-large map
-source: https://gist.github.com/bigglesrocks/d75091700f8f2be5abfe
-----------------------------------------
-*/
+
+// ----------------------------------------
+// map-collect()
+// ----------------------------------------
+// Collect multiple maps into a single
+// large map
+// source: https://gist.github.com/bigglesrocks/d75091700f8f2be5abfe
+// ----------------------------------------
 
 @function map-collect($maps...) {
   $collection: ();
@@ -106,15 +95,13 @@ source: https://gist.github.com/bigglesrocks/d75091700f8f2be5abfe
   @return $collection;
 }
 
-/*
-----------------------------------------
-smart-quote()
-----------------------------------------
-Quotes strings
-Inspects `px`, `xs`, and `xl` numbers
-Leaves bools as is
-----------------------------------------
-*/
+// ----------------------------------------
+// smart-quote()
+// ----------------------------------------
+// Quotes strings
+// Inspects `px`, `xs`, and `xl` numbers
+// Leaves bools as is
+// ----------------------------------------
 
 @function smart-quote($value) {
   @if type-of($value) == 'string' {
@@ -135,13 +122,11 @@ Leaves bools as is
   @return $value;
 }
 
-/*
-----------------------------------------
-remove()
-----------------------------------------
-Remove a value from a list
-----------------------------------------
-*/
+// ----------------------------------------
+// remove()
+// ----------------------------------------
+// Remove a value from a list
+// ----------------------------------------
 
 @function remove($list, $value, $recursive: false) {
   $result: ();
@@ -158,13 +143,11 @@ Remove a value from a list
   @return $result;
 }
 
-/*
-----------------------------------------
-strunquote()
-----------------------------------------
-Unquote a string
-----------------------------------------
-*/
+// ----------------------------------------
+// strunquote()
+// ----------------------------------------
+// Unquote a string
+// ----------------------------------------
 
 @function strunquote($value) {
   @if type-of($value) == 'string' {
@@ -174,17 +157,15 @@ Unquote a string
   @return $value;
 }
 
-/*
-----------------------------------------
-to-map()
-----------------------------------------
-Convert a single value to a USWDS
-value map.
+// ----------------------------------------
+// to-map()
+// ----------------------------------------
+// Convert a single value to a USWDS
+// value map.
 
-Candidate for deprecation if we remove
-isReadable
-----------------------------------------
-*/
+// Candidate for deprecation if we remove
+// isReadable
+// ----------------------------------------
 
 @function to-map($key, $values) {
   $l: length($values);
@@ -199,17 +180,16 @@ isReadable
   );
 }
 
-/*
-----------------------------------------
-base-to-map()
-----------------------------------------
-Convert a single base to a USWDS
-value map.
 
-Candidate for deprecation if we remove
-isReadable
-----------------------------------------
-*/
+// ----------------------------------------
+// base-to-map()
+// ----------------------------------------
+// Convert a single base to a USWDS
+// value map.
+
+// Candidate for deprecation if we remove
+// isReadable
+// ----------------------------------------
 
 @function base-to-map($values) {
   $l: length($values);
@@ -230,14 +210,12 @@ isReadable
   }
 }
 
-/*
-----------------------------------------
-ns()
-----------------------------------------
-Add a namesspace of $type if that
-namespace is set to output
-----------------------------------------
-*/
+// ----------------------------------------
+// ns()
+// ----------------------------------------
+// Add a namesspace of $type if that
+// namespace is set to output
+// ----------------------------------------
 
 @function ns($type) {
   $type: smart-quote($type);
@@ -249,17 +227,15 @@ namespace is set to output
   @return map-deep-get($theme-namespace, $type, namespace);
 }
 
-/*
-----------------------------------------
-de-list()
-----------------------------------------
-Transform a one-element list or arglist
-into that single element.
-----------------------------------------
-(1) => 1
-((1)) => (1)
-----------------------------------------
-*/
+// ----------------------------------------
+// de-list()
+// ----------------------------------------
+// Transform a one-element list or arglist
+// into that single element.
+// ----------------------------------------
+// (1) => 1
+// ((1)) => (1)
+// ----------------------------------------
 
 @function de-list($value) {
   $types: ('list', 'arglist');
@@ -277,17 +253,15 @@ into that single element.
   @return $output;
 }
 
-/*
-----------------------------------------
-unpack()
-----------------------------------------
-Create lists of single items from lists
-of lists.
-----------------------------------------
-(1, (2.1, 2.2), 3) -->
-(1, 2.1, 2.2, 3)
-----------------------------------------
-*/
+// ----------------------------------------
+// unpack()
+// ----------------------------------------
+// Create lists of single items from lists
+// of lists.
+// ----------------------------------------
+// (1, (2.1, 2.2), 3) -->
+// (1, 2.1, 2.2, 3)
+// ----------------------------------------
 
 @function unpack($value) {
   $output: ();
@@ -310,14 +284,12 @@ of lists.
   @return de-list($output);
 }
 
-/*
-----------------------------------------
-get-last()
-----------------------------------------
-Return the last item of a list,
-Return null if the value is null
-----------------------------------------
-*/
+// ----------------------------------------
+// get-last()
+// ----------------------------------------
+// Return the last item of a list,
+// Return null if the value is null
+// ----------------------------------------
 
 @function get-last($props) {
   $length: length($props);
@@ -329,14 +301,12 @@ Return null if the value is null
   @return $last;
 }
 
-/*
-----------------------------------------
-has-important()
-----------------------------------------
-Check to see if `!important` is
-being passed in a mixin's props
-----------------------------------------
-*/
+// ----------------------------------------
+// has-important()
+// ----------------------------------------
+// Check to see if `!important` is
+// being passed in a mixin's props
+// ----------------------------------------
 
 @function has-important($props) {
   $props: de-list($props);
@@ -348,13 +318,11 @@ being passed in a mixin's props
   @return false;
 }
 
-/*
-----------------------------------------
-append-important()
-----------------------------------------
-Append `!important` to a list
-----------------------------------------
-*/
+// ----------------------------------------
+// append-important()
+// ----------------------------------------
+// Append `!important` to a list
+// ----------------------------------------
 
 @function append-important($source, $destination) {
   @if get-last($source) == '!important' {
@@ -364,14 +332,12 @@ Append `!important` to a list
   @return $destination;
 }
 
-/*
-----------------------------------------
-spacing-multiple()
-----------------------------------------
-Converts a spacing unit multiple into
-the desired final units (currently rem)
-----------------------------------------
-*/
+// ----------------------------------------
+// spacing-multiple()
+// ----------------------------------------
+// Converts a spacing unit multiple into
+// the desired final units (currently rem)
+// ----------------------------------------
 
 @function spacing-multiple($unit) {
   $grid-to-rem: ($system-spacing-grid-base * $unit) / $root-font-size-equiv * 1rem;
@@ -379,13 +345,11 @@ the desired final units (currently rem)
   @return $grid-to-rem;
 }
 
-/*
-----------------------------------------
-rem-to-px()
-----------------------------------------
-Converts a value in rem to a value in px
-----------------------------------------
-*/
+// ----------------------------------------
+// rem-to-px()
+// ----------------------------------------
+// Converts a value in rem to a value in px
+// ----------------------------------------
 
 @function rem-to-px($value-in-rem) {
   @if unit($value-in-rem) == 'rem' {
@@ -398,15 +362,13 @@ Converts a value in rem to a value in px
   @return $value-in-rem;
 }
 
-/*
-----------------------------------------
-rem-to-user-em()
-----------------------------------------
-Converts a value in rem to a value in
-[user-settings] em for use in media
-queries
-----------------------------------------
-*/
+// ----------------------------------------
+// rem-to-user-em()
+// ----------------------------------------
+// Converts a value in rem to a value in
+// [user-settings] em for use in media
+// queries
+// ----------------------------------------
 
 @function rem-to-user-em($grid-in-rem) {
   $rem-to-user-em: ($grid-in-rem / 1rem) * 1em;
@@ -414,15 +376,13 @@ queries
   @return $rem-to-user-em;
 }
 
-/*
-----------------------------------------
-validate-typeface-token()
-----------------------------------------
-Check to see if a typeface-token exists.
-Throw an error if a passed token does
-not exist in the typeface-token map.
-----------------------------------------
-*/
+// ----------------------------------------
+// validate-typeface-token()
+// ----------------------------------------
+// Check to see if a typeface-token exists.
+// Throw an error if a passed token does
+// not exist in the typeface-token map.
+// ----------------------------------------
 
 @function validate-typeface-token($typeface-token) {
   @if not map-has-key($all-typeface-tokens, $typeface-token) {
@@ -433,13 +393,11 @@ not exist in the typeface-token map.
   @return $typeface-token;
 }
 
-/*
-----------------------------------------
-cap-height()
-----------------------------------------
-Get the cap height of a valid typeface
-----------------------------------------
-*/
+// ----------------------------------------
+// cap-height()
+// ----------------------------------------
+// Get the cap height of a valid typeface
+// ----------------------------------------
 
 @function cap-height($typeface-token) {
   @if not $typeface-token {
@@ -451,13 +409,11 @@ Get the cap height of a valid typeface
   @return map-get($token-data, 'cap-height');
 }
 
-/*
-----------------------------------------
-px-to-rem()
-----------------------------------------
-Converts a value in px to a value in rem
-----------------------------------------
-*/
+// ----------------------------------------
+// px-to-rem()
+// ----------------------------------------
+// Converts a value in px to a value in rem
+// ----------------------------------------
 
 @function px-to-rem($pixels) {
   @if not $pixels {
@@ -468,14 +424,13 @@ Converts a value in px to a value in rem
   @return $px-to-rem;
 }
 
-/*
-----------------------------------------
-normalize-type-scale()
-----------------------------------------
-Normalizes a specific face's optical size
-to a set target
-----------------------------------------
-*/
+
+// ----------------------------------------
+// normalize-type-scale()
+// ----------------------------------------
+// Normalizes a specific face's optical size
+// to a set target
+// ----------------------------------------
 
 @function normalize-type-scale($cap-height, $scale) {
   @if not $cap-height {
@@ -487,19 +442,17 @@ to a set target
   @return px-to-rem($this-scale);
 }
 
-/*
-----------------------------------------
-utility-font()
-----------------------------------------
-Get a normalized font-size in rem from
-a family and a type size in either
-system scale or project scale
-----------------------------------------
-Not the public-facing function.
-Used for building the utilities and
-withholds certain errors.
-----------------------------------------
-*/
+// ----------------------------------------
+// utility-font()
+// ----------------------------------------
+// Get a normalized font-size in rem from
+// a family and a type size in either
+// system scale or project scale
+// ----------------------------------------
+// Not the public-facing function.
+// Used for building the utilities and
+// withholds certain errors.
+// ----------------------------------------
 
 @function utility-font($family, $scale) {
   @if not map-has-key($project-cap-heights, $family) {
@@ -524,15 +477,13 @@ withholds certain errors.
   @return normalize-type-scale($this-cap, $this-scale);
 }
 
-/*
-----------------------------------------
-line-height()
-lh()
-----------------------------------------
-Get a normalized line-height from
-a family and a line-height scale unit
-----------------------------------------
-*/
+// ----------------------------------------
+// line-height()
+// lh()
+// ----------------------------------------
+// Get a normalized line-height from
+// a family and a line-height scale unit
+// ----------------------------------------
 
 @function lh($props...) {
   $props: unpack($props);
@@ -570,15 +521,13 @@ a family and a line-height scale unit
   @return lh($props...);
 }
 
-/*
-----------------------------------------
-convert-to-font-type()
-----------------------------------------
-Converts a font-role token into a
-font-type token. Leaves font-type tokens
-unchanged.
-----------------------------------------
-*/
+// ----------------------------------------
+// convert-to-font-type()
+// ----------------------------------------
+// Converts a font-role token into a
+// font-type token. Leaves font-type tokens
+// unchanged.
+// ----------------------------------------
 
 @function convert-to-font-type($token) {
   @if map-has-key($project-font-role-tokens, $token) {
@@ -588,14 +537,12 @@ unchanged.
   @return $token;
 }
 
-/*
-----------------------------------------
-get-font-stack()
-----------------------------------------
-Get a font stack from a style- or
-role-based font token.
-----------------------------------------
-*/
+// ----------------------------------------
+// get-font-stack()
+// ----------------------------------------
+// Get a font stack from a style- or
+// role-based font token.
+// ----------------------------------------
 
 @function get-font-stack($token) {
   // Start by converting to a type token (sans, serif, etc)
@@ -639,14 +586,12 @@ role-based font token.
   @return false;
 }
 
-/*
-----------------------------------------
-get-typeface-token()
-----------------------------------------
-Get a typeface token from a font-type or
-font-role token.
-----------------------------------------
-*/
+// ----------------------------------------
+// get-typeface-token()
+// ----------------------------------------
+// Get a typeface token from a font-type or
+// font-role token.
+// ----------------------------------------
 
 @function get-typeface-token($font-token) {
   $this-token: $font-token;
@@ -656,15 +601,13 @@ font-role token.
   @return map-deep-get($project-font-type-tokens, $this-token, 'typeface-token');
 }
 
-/*
-----------------------------------------
-get-system-color()
-----------------------------------------
-Derive a system color from its
-family, value, and vivid or a passed
-variable that is, itself, a list
-----------------------------------------
-*/
+// ----------------------------------------
+// get-system-color()
+// ----------------------------------------
+// Derive a system color from its
+// family, value, and vivid or a passed
+// variable that is, itself, a list
+// ----------------------------------------
 
 @function get-system-color(
   $color-family: false,
@@ -728,13 +671,13 @@ variable that is, itself, a list
   @return $output;
 }
 
-/*
-----------------------------------------
-system-type-scale()
-----------------------------------------
-Get a value from the system type scale
-----------------------------------------
-*/
+
+// ----------------------------------------
+// system-type-scale()
+// ----------------------------------------
+// Get a value from the system type scale
+// ----------------------------------------
+
 
 @function system-type-scale($scale) {
   $scale: smart-quote($scale);
@@ -751,16 +694,14 @@ Get a value from the system type scale
   @return map-get($system-type-scale, $scale);
 }
 
-/*
-----------------------------------------
-calc-gap-offset()
-----------------------------------------
-Calculate a valid uswds unit that is
-half the width of a given unit, for
-calculating gap offset in the layout
-grid.
-----------------------------------------
-*/
+// ----------------------------------------
+// calc-gap-offset()
+// ----------------------------------------
+// Calculate a valid uswds unit that is
+// half the width of a given unit, for
+// calculating gap offset in the layout
+// grid.
+// ----------------------------------------
 
 @function calc-gap-offset($gap-size) {
   $gap-size: smart-quote($gap-size);
@@ -780,30 +721,26 @@ grid.
   @return map-get($spacing-to-token, $numeric-eq-half);
 }
 
-/*
-----------------------------------------
-get-standard-values()
-----------------------------------------
-Gets a map of USWDS standard values
-for a property
-----------------------------------------
-*/
+// ----------------------------------------
+// get-standard-values()
+// ----------------------------------------
+// Gets a map of USWDS standard values
+// for a property
+// ----------------------------------------
 
 @function get-standard-values($property) {
   @return map-deep-get($system-properties, $property, standard);
 }
 
-/*
-----------------------------------------
-number-to-token()
-----------------------------------------
-Converts an integer or numeric value
-into a system value
+// ----------------------------------------
+// number-to-token()
+// ----------------------------------------
+// Converts an integer or numeric value
+// into a system value
 
-Ex: .5   --> '05'
-    -1px  --> 'neg-1px'
-----------------------------------------
-*/
+// Ex: .5   --> '05'
+//     -1px  --> 'neg-1px'
+// ----------------------------------------
 
 @function number-to-token($number) {
   $number: inspect($number);
@@ -815,18 +752,16 @@ Ex: .5   --> '05'
   @return map-get($number-to-value, $number);
 }
 
-/*
-----------------------------------------
-columns()
-----------------------------------------
-outputs a grid-col number based on
-the number of desired columns in the
-12-column grid
+// ----------------------------------------
+// columns()
+// ----------------------------------------
+// outputs a grid-col number based on
+// the number of desired columns in the
+// 12-column grid
 
-Ex: columns(2) --> 6
-    grid-col(columns(2))
-----------------------------------------
-*/
+// Ex: columns(2) --> 6
+//     grid-col(columns(2))
+// ----------------------------------------
 
 @function columns($number) {
   $options: 'auto', 'fill';
@@ -842,17 +777,15 @@ Ex: columns(2) --> 6
   @return $columns;
 }
 
-/*
-----------------------------------------
-get-uswds-value()
-----------------------------------------
-Finds and outputs a value from the
-USWDS standard values.
+// ----------------------------------------
+// get-uswds-value()
+// ----------------------------------------
+// Finds and outputs a value from the
+// USWDS standard values.
 
-Used to build other standard utility
-functions and mixins.
-----------------------------------------
-*/
+// Used to build other standard utility
+// functions and mixins.
+// ----------------------------------------
 
 @function get-uswds-value($property, $value...) {
   @if type-of($value) == 'arglist' and nth($value, 1) == override {
@@ -910,13 +843,11 @@ functions and mixins.
   @return $value;
 }
 
-/*
-----------------------------------------
-color()
-----------------------------------------
-Derive a color from a color shortcode
-----------------------------------------
-*/
+// ----------------------------------------
+// color()
+// ----------------------------------------
+// Derive a color from a color shortcode
+// ----------------------------------------
 
 @function color($shortcode) {
   $shortcode: smart-quote(unpack($shortcode));
@@ -942,14 +873,12 @@ Derive a color from a color shortcode
   @error '`#{$shortcode}` is not a valid color token.';
 }
 
-/*
-----------------------------------------
-advanced-color()
-----------------------------------------
-Derive a color from a color triplet:
-[family], [grade], [variant]
-----------------------------------------
-*/
+// ----------------------------------------
+// advanced-color()
+// ----------------------------------------
+// Derive a color from a color triplet:
+// [family], [grade], [variant]
+// ----------------------------------------
 
 // color() can have a 1, 2, or 3 arguments passed to it:
 //
@@ -1029,14 +958,12 @@ Derive a color from a color triplet:
   @return map-deep-get($all-project-colors, $color-family, $color-grade);
 }
 
-/*
-----------------------------------------
-units()
-----------------------------------------
-Converts a spacing unit into
-the desired final units (currently rem)
-----------------------------------------
-*/
+// ----------------------------------------
+// units()
+// ----------------------------------------
+// Converts a spacing unit into
+// the desired final units (currently rem)
+// ----------------------------------------
 
 @function units($value) {
   $converted: if(type-of($value) == 'string',
@@ -1053,14 +980,12 @@ the desired final units (currently rem)
   @return map-get($project-spacing-standard, $converted);
 }
 
-/*
-----------------------------------------
-get-palettes()
-----------------------------------------
-Build a single map of plugin values
-from a list of plugin keys.
-----------------------------------------
-*/
+// ----------------------------------------
+// get-palettes()
+// ----------------------------------------
+// Build a single map of plugin values
+// from a list of plugin keys.
+// ----------------------------------------
 
 @function get-palettes($list) {
   $our-palettes: ();
@@ -1083,14 +1008,12 @@ from a list of plugin keys.
   @return $our-palettes;
 }
 
-/*
-----------------------------------------
-border-radius()
-----------------------------------------
-Get a border-radius from the system
-border-radii
-----------------------------------------
-*/
+// ----------------------------------------
+// border-radius()
+// ----------------------------------------
+// Get a border-radius from the system
+// border-radii
+// ----------------------------------------
 
 @function border-radius($value) {
   @if map-has-key($all-border-radius, $value) {
@@ -1102,15 +1025,14 @@ border-radii
   }
 }
 
-/*
-----------------------------------------
-font-weight()
-fw()
-----------------------------------------
-Get a font-weight value from the
-system font-weight
-----------------------------------------
-*/
+// ----------------------------------------
+// font-weight()
+// fw()
+// ----------------------------------------
+// Get a font-weight value from the
+// system font-weight
+// ----------------------------------------
+
 
 @function font-weight($value) {
   @return get-uswds-value(font-weight, $value);
@@ -1120,39 +1042,33 @@ system font-weight
   @return font-weight($value);
 }
 
-/*
-----------------------------------------
-feature()
-----------------------------------------
-Gets a valid USWDS font feature setting
-----------------------------------------
-*/
+// ----------------------------------------
+// feature()
+// ----------------------------------------
+// Gets a valid USWDS font feature setting
+// ----------------------------------------
 
 @function feature($value) {
   @return get-uswds-value(feature, $value);
 }
 
-/*
-----------------------------------------
-flex()
-----------------------------------------
-Gets a valid USWDS flex value
-----------------------------------------
-*/
+// ----------------------------------------
+// flex()
+// ----------------------------------------
+// Gets a valid USWDS flex value
+// ----------------------------------------
 
 @function flex($value) {
   @return get-uswds-value(flex, $value);
 }
 
-/*
-----------------------------------------
-font-family()
-family()
-----------------------------------------
-Get a font-family stack from a
-role-based or type-based font family
-----------------------------------------
-*/
+// ----------------------------------------
+// font-family()
+// family()
+// ----------------------------------------
+// Get a font-family stack from a
+// role-based or type-based font family
+// ----------------------------------------
 
 @function font-family($value) {
   @return get-uswds-value(font-family, $value);
@@ -1166,15 +1082,13 @@ role-based or type-based font family
   @return font-family($value);
 }
 
-/*
-----------------------------------------
-letter-spacing()
-ls()
-----------------------------------------
-Get a letter-spacing value from the
-system letter-spacing
-----------------------------------------
-*/
+// ----------------------------------------
+// letter-spacing()
+// ls()
+// ----------------------------------------
+// Get a letter-spacing value from the
+// system letter-spacing
+// ----------------------------------------
 
 @function letter-spacing($value) {
   $lh-map: map-get($system-properties, letter-spacing);
@@ -1193,65 +1107,56 @@ system letter-spacing
   @return letter-spacing($value);
 }
 
-/*
-----------------------------------------
-measure()
-----------------------------------------
-Gets a valid USWDS reading line length
-----------------------------------------
-*/
+
+// ----------------------------------------
+// measure()
+// ----------------------------------------
+// Gets a valid USWDS reading line length
+// ----------------------------------------
 
 @function measure($value) {
   @return get-uswds-value(measure, $value);
 }
 
-/*
-----------------------------------------
-opacity()
-----------------------------------------
-Get an opacity from the system
-opacities
-----------------------------------------
-*/
+// ----------------------------------------
+// opacity()
+// ----------------------------------------
+// Get an opacity from the system
+// opacities
+// ----------------------------------------
 
 @function opacity($value) {
   @return get-uswds-value(opacity, $value);
 }
 
-/*
-----------------------------------------
-order()
-----------------------------------------
-Get an order value from the
-system orders
-----------------------------------------
-*/
+// ----------------------------------------
+// order()
+// ----------------------------------------
+// Get an order value from the
+// system orders
+// ----------------------------------------
 
 @function order($value) {
   @return get-uswds-value(order, $value);
 }
 
-/*
-----------------------------------------
-radius()
-----------------------------------------
-Get a border-radius value from the
-system letter-spacing
-----------------------------------------
-*/
+// ----------------------------------------
+// radius()
+// ----------------------------------------
+// Get a border-radius value from the
+// system letter-spacing
+// ----------------------------------------
 
 @function radius($value) {
   @return get-uswds-value(border-radius, $value);
 }
 
-/*
-----------------------------------------
-font-size()
-----------------------------------------
-Get type scale value from a [family] and
-[scale]
-----------------------------------------
-*/
+// ----------------------------------------
+// font-size()
+// ----------------------------------------
+// Get type scale value from a [family] and
+// [scale]
+// ----------------------------------------
 
 @function font-size($family, $scale, $force: true) {
   $our-family: smart-quote($family);
@@ -1288,15 +1193,13 @@ Get type scale value from a [family] and
   @return font-size($family, $scale);
 }
 
-/*
-----------------------------------------
-z-index()
-z()
-----------------------------------------
-Get a z-index value from the
-system z-index
-----------------------------------------
-*/
+// ----------------------------------------
+// z-index()
+// z()
+// ----------------------------------------
+// Get a z-index value from the
+// system z-index
+// ----------------------------------------
 
 @function z-index($value) {
   @return get-uswds-value(z-index, $value);

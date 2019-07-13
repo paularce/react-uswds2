@@ -1,38 +1,32 @@
-import React from "react";
-import { DocsPage, DocsSection, DocsExample, DocsPreview } from "./Docs.jsx";
-import Highlight from "react-highlight";
+import React from 'react';
+import { DocsPage, DocsSection, DocsExample, DocsPreview } from './Docs.jsx';
+import Highlight from 'react-highlight';
 import {
   Table,
   TableRow,
   TableHeaderCell,
   TableCell
-} from "../../uswds/components/Tables";
-// import Label from '../../uswds/components/Label';
-import { Accordion, AccordionItem } from "../../uswds/components/Accordion";
+} from '../../uswds/components/Tables';
+import { Accordion, AccordionItem } from '../../uswds/components/Accordion';
 
-/**
- * AccordionsContainer content
- * @returns {node} the node
- */
+//  * AccordionsContainer content
+//  @returns {node} the node
+
 export default function AccordionsContainer() {
   return (
-    <DocsPage title="Accordion">
-      {/* Importing */}
-      <DocsSection title="Importing">
-        <Highlight language="javascript">
-          {`import { Accordion, AccordionItem } from "%path%/uswds/components/Accordion";`}
+    <DocsPage title='Accordion'>
+      <DocsSection title='Importing'>
+        <Highlight language='javascript'>
+          {`import { Accordion, AccordionItem } from '%path%/uswds/components/Accordion';`}
         </Highlight>
       </DocsSection>
 
-      {/* Props */}
-      <DocsSection title="Props">
+      <DocsSection title='Props'>
         <h4>Accordion</h4>
-        <Table columns={["Prop", "Type", "Default", "Description"]}>
+        <Table columns={['Prop', 'Type', 'Default', 'Description']}>
           <TableRow>
             <TableHeaderCell>bordered</TableHeaderCell>
-            <TableCell>
-              bool
-            </TableCell>
+            <TableCell>bool</TableCell>
             <TableCell>false</TableCell>
             <TableCell>If the accordion has a border or not</TableCell>
           </TableRow>
@@ -47,14 +41,13 @@ export default function AccordionsContainer() {
             <TableCell>bool</TableCell>
             <TableCell>false</TableCell>
             <TableCell>
-              If true, all accordion items will be collapsed when the page
-              loads 
+              If true, all accordion items will be collapsed when the page loads
             </TableCell>
           </TableRow>
         </Table>
 
         <h4>AccordionItem</h4>
-        <Table columns={["Prop", "Type", "Default", "Description"]}>
+        <Table columns={['Prop', 'Type', 'Default', 'Description']}>
           <TableRow>
             <TableHeaderCell>accordionIndex</TableHeaderCell>
             <TableCell>number</TableCell>
@@ -83,7 +76,7 @@ export default function AccordionsContainer() {
             <TableCell>bool</TableCell>
             <TableCell>false</TableCell>
             <TableCell>
-              ???? If true, item is expanded by default ??????{" "}
+              ???? If true, item is expanded by default ??????{' '}
             </TableCell>
           </TableRow>
           <TableRow>
@@ -94,17 +87,15 @@ export default function AccordionsContainer() {
             </TableCell>
             <TableCell>Text that appears in the header area</TableCell>
           </TableRow>
-
         </Table>
       </DocsSection>
 
-      {/* Usage */}
-      <DocsSection title="Usage">
+      <DocsSection title='Usage'>
         <DocsExample>
           <h4>Borderless accordion</h4>
           <DocsPreview>
             <Accordion>
-              <AccordionItem title="First Amendment">
+              <AccordionItem title='First Amendment'>
                 <p>
                   Congress shall make no law respecting an establishment of
                   religion, or prohibiting the free exercise thereof; or
@@ -113,7 +104,7 @@ export default function AccordionsContainer() {
                   Government for a redress of grievances.
                 </p>
               </AccordionItem>
-              <AccordionItem title="Second Amendment">
+              <AccordionItem title='Second Amendment'>
                 <p>
                   A well regulated Militia, being necessary to the security of a
                   free State, the right of the people to keep and bear Arms,
@@ -130,7 +121,7 @@ export default function AccordionsContainer() {
               </AccordionItem>
             </Accordion>
           </DocsPreview>
-          <Highlight className="html">
+          <Highlight className='html'>
             {`<Accordion>
   <AccordionItem title="First Amendment">
     <p>
@@ -156,7 +147,7 @@ export default function AccordionsContainer() {
           <h4>Bordered accordion</h4>
           <DocsPreview>
             <Accordion bordered>
-              <AccordionItem title="First Amendment">
+              <AccordionItem title='First Amendment'>
                 <p>
                   Congress shall make no law respecting an establishment of
                   religion, or prohibiting the free exercise thereof; or
@@ -165,7 +156,7 @@ export default function AccordionsContainer() {
                   Government for a redress of grievances.
                 </p>
               </AccordionItem>
-              <AccordionItem title="Second Amendment">
+              <AccordionItem title='Second Amendment'>
                 <p>
                   A well regulated Militia, being necessary to the security of a
                   free State, the right of the people to keep and bear Arms,
@@ -182,7 +173,7 @@ export default function AccordionsContainer() {
               </AccordionItem>
             </Accordion>
           </DocsPreview>
-          <Highlight className="html">
+          <Highlight className='html'>
             {`<Accordion type={Accordion.TYPE_BORDERED}>
   <AccordionItem title="First Amendment">
     <p>

@@ -1,18 +1,16 @@
-/*
-========================================
-flex-direction
-----------------------------------------
-usage:
-  .flex-direction-[value]
-----------------------------------------
-output:
-  flex-direction: [value]
-----------------------------------------
-example:
-  .flex-direction-row {
-    flex-direction: row; }
-----------------------------------------
-*/
+// ========================================
+// flex-direction
+// ----------------------------------------
+// usage:
+//   .flex-direction-[value]
+// ----------------------------------------
+// output:
+//   flex-direction: [value]
+// ----------------------------------------
+// example:
+//   .flex-direction-row {
+//     flex-direction: row; }
+// ----------------------------------------
 
 $u-flex-direction: (
   flex-direction: (

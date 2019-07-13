@@ -2,34 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Utilities from '../helpers/utilities';
 
-/**
- * A radio button and a label
- *
- * Required props
- * - label, string -- Text for the label
- *
- * Optional props
- * - id, string -- input's id and label's for attributes
- * - name, string, defaults to 'radios' -- Sets name attribute
- * - value, string, defaults to id -- Sets value attribute
- * - checked, bool -- If true, item is initially set to checked
- * - disabled, bool --If item, item is disabled
- */
-export default class Radio extends React.Component {
+//  * A radio button and a label
+//  *
+//  * Required props
+//  * - label, string -- Text for the label
+//  *
+//  * Optional props
+//  * - id, string -- input's id and label's for attributes
+//  * - name, string, defaults to 'radios' -- Sets name attribute
+//  * - value, string, defaults to id -- Sets value attribute
+//  * - checked, bool -- If true, item is initially set to checked
+//  * - disabled, bool --If item, item is disabled
 
-  /**
-   * check to see if an Id was passed in, if not generate one.
-   */
+export default class Radio extends React.Component {
   componentWillMount() {
-    this.id = this.props.id ? this.props.id : Utilities.uniqueIdForComponent(this);
+    this.id = this.props.id
+      ? this.props.id
+      : Utilities.uniqueIdForComponent(this);
   }
 
-  /**
-   * Renders the DOM node
-   * @returns {node} div that includes the input and label
-   */
-  render () {
-    const {label, className, disabled, id = this.id, value, ...otherProps} = this.props;
+  render() {
+    const {
+      label,
+      className,
+      disabled,
+      id = this.id,
+      value,
+      ...otherProps
+    } = this.props;
 
     return (
       <div className={`usa-radio ${className}`}>
@@ -40,8 +40,11 @@ export default class Radio extends React.Component {
           aria-disabled={disabled}
           id={id}
           value={value ? value : id}
-          {...otherProps}/>
-        <label className='usa-radio__label' htmlFor={id}>{label}</label>
+          {...otherProps}
+        />
+        <label className='usa-radio__label' htmlFor={id}>
+          {label}
+        </label>
       </div>
     );
   }

@@ -1,18 +1,16 @@
-/*
-========================================
-text-decoration-color
-----------------------------------------
-usage:
-  .text-decoration-color-[key]
-----------------------------------------
-output:
-  text-decoration-color: [value]
-----------------------------------------
-example:
-  .text-decoration-color-black {
-    text-decoration-color: #000; }
-----------------------------------------
-*/
+// ========================================
+// text-decoration-color
+// ----------------------------------------
+// usage:
+//   .text-decoration-color-[key]
+// ----------------------------------------
+// output:
+//   text-decoration-color: [value]
+// ----------------------------------------
+// example:
+//   .text-decoration-color-black {
+//     text-decoration-color: #000; }
+// ----------------------------------------
 
 $u-text-decoration-color: (
   text-decoration-color: (

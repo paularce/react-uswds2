@@ -1,44 +1,36 @@
-/*
-* * * * * ==============================
-* * * * * ==============================
-* * * * * ==============================
-* * * * * ==============================
-========================================
-========================================
-========================================
-----------------------------------------
-USWDS 2.0 Variables
-Use for computed variables or any
-not meant to be set by system users
-directly.
-----------------------------------------
-*/
+// * * * * * ==============================
+// * * * * * ==============================
+// * * * * * ==============================
+// * * * * * ==============================
+// ========================================
+// ========================================
+// ========================================
+// ----------------------------------------
+// USWDS 2.0 Variables
+// Use for computed variables or any
+// not meant to be set by system users
+// directly.
+// ----------------------------------------
 
-/*
-----------------------------------------
-Touch target size
-----------------------------------------
-*/
+// ----------------------------------------
+// Touch target size
+// ----------------------------------------
 
 $size-touch-target: 6; // 48px to meet WCAG minimum of 44px
 
-/*
-----------------------------------------
-Namespace
-----------------------------------------
-*/
+// ----------------------------------------
+// Namespace
+// ----------------------------------------
 
 $ns-utility: ns('utility');
 $ns-grid: ns('grid');
 
-/*
-----------------------------------------
-Spacing
-----------------------------------------
-All spacing values that can be called
-by units()
-----------------------------------------
-*/
+// ----------------------------------------
+// Spacing
+// ----------------------------------------
+// All spacing values that can be called
+// by units()
+// ----------------------------------------
 
 $project-spacing-standard: map-collect(
   map-get($system-spacing, smaller),
@@ -129,14 +121,12 @@ $number-to-value: (
   '-9':         'neg-9',
 );
 
-/*
-----------------------------------------
-Project fonts
-----------------------------------------
-Collects font settings in a map for
-looping.
-----------------------------------------
-*/
+// ----------------------------------------
+// Project fonts
+// ----------------------------------------
+// Collects font settings in a map for
+// looping.
+// ----------------------------------------
 
 $project-font-type-tokens: (
   'cond': (
@@ -179,16 +169,14 @@ $project-font-role-tokens: (
   'alt':      $theme-font-role-alt,
 );
 
-/*
-----------------------------------------
-Font stack
-----------------------------------------
-Compute the project font stack based on
-the project fonts and the font
-definition values set in
-core/_font-definitions
-----------------------------------------
-*/
+// ----------------------------------------
+// Font stack
+// ----------------------------------------
+// Compute the project font stack based on
+// the project fonts and the font
+// definition values set in
+// core/_font-definitions
+// ----------------------------------------
 
 $project-font-stacks:(
   'cond':     get-font-stack('cond'),
@@ -228,13 +216,11 @@ $project-font-body:           get-typeface-token('body');
 $project-font-code:           get-typeface-token('code');
 $project-font-alt:            get-typeface-token('alt');
 
-/*
-----------------------------------------
-Cap heights
-----------------------------------------
-Collect project cap heights
-----------------------------------------
-*/
+// ----------------------------------------
+// Cap heights
+// ----------------------------------------
+// Collect project cap heights
+// ----------------------------------------
 
 $project-cap-heights:(
   'base':     $system-base-cap-height,
@@ -251,12 +237,10 @@ $project-cap-heights:(
   'alt':      cap-height($project-font-alt),
 );
 
-/*
-----------------------------------------
-Set basic font rules for the font
-utilities to reference.
-----------------------------------------
-*/
+// ----------------------------------------
+// Set basic font rules for the font
+// utilities to reference.
+// ----------------------------------------
 
 $if-important: '';
 
@@ -280,11 +264,9 @@ $project-font-weights: (
   'heavy':      $theme-font-weight-heavy,
 );
 
-/*
-----------------------------------------
-Theme color map
-----------------------------------------
-*/
+// ----------------------------------------
+// Theme color map
+// ----------------------------------------
 
 $project-colors: (
   'base': (
@@ -383,11 +365,9 @@ $palette-colors: map-collect(
   $system-colors
 );
 
-/*
-----------------------------------------
-Theme color shortcodes
-----------------------------------------
-*/
+// ----------------------------------------
+// Theme color shortcodes
+// ----------------------------------------
 
 $tokens-color-theme: (
   'base-lightest':            color($theme-color-base-lightest),
@@ -469,11 +449,9 @@ $all-color-shortcodes: map-collect(
 
 $color-palette-grayscale: $system-color-gray;
 
-/*
-----------------------------------------
-Build the project type scale map
-----------------------------------------
-*/
+// ----------------------------------------
+// Build the project type scale map
+// ----------------------------------------
 
 $project-type-scale: (
   '3xs': system-type-scale($theme-type-scale-3xs),
@@ -492,11 +470,9 @@ $all-type-scale: map-collect(
   $project-type-scale
 );
 
-/*
-----------------------------------------
-Border-radius
-----------------------------------------
-*/
+// ----------------------------------------
+// Border-radius
+// ----------------------------------------
 
 $project-border-radius: (
   0:          0,
@@ -512,11 +488,9 @@ $all-border-radius: map-collect(
   map-get($system-spacing, small)
 );
 
-/*
-----------------------------------------
-Column gaps
-----------------------------------------
-*/
+// ----------------------------------------
+// Column gaps
+// ----------------------------------------
 
 $project-column-gaps: (
   'sm': $theme-column-gap-sm,
@@ -524,11 +498,9 @@ $project-column-gaps: (
   'lg': $theme-column-gap-lg,
 );
 
-/*
-----------------------------------------
-Grid
-----------------------------------------
-*/
+// ----------------------------------------
+// Grid
+// ----------------------------------------
 
 $grid-global: '';
 

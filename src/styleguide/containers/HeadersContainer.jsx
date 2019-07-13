@@ -1,18 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-/**
- * The main app component for the Styleguide.
- *
- * This component will render the main page layout items as well as any header
- * metadata supplied to the `<Helmet .../>` component.
- */
+//  The main app component for the Styleguide.
+// 
+//  This component will render the main page layout items as well as any header
+//  metadata supplied to the `<Helmet .../>` component.
+
 export default class HeadersContainer extends React.Component {
-  /**
-   * Renders the component.
-   *
-   * @returns {Node|null} The rendered DOM node.
-   */
+
+  //  Renders the component.
+  // 
+  //  @returns {Node|null} The rendered DOM node.
+
 
    static propTypes = {
     children: PropTypes.node

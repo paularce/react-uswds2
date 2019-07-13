@@ -1,14 +1,14 @@
 import React from "react";
 
-/**
- * Displays the Styleguide content for Footers.
- */
+
+//  Displays the Styleguide content for Footers.
+ 
 export default class FootersContainer extends React.Component {
-  /**
-   * Renders the component.
-   *
-   * @returns {Node|null} The rendered DOM node.
-   */
+
+  //  Renders the component.
+  // 
+  //  @returns {Node|null} The rendered DOM node.
+  
   render() {
     return (
       <React.Fragment>

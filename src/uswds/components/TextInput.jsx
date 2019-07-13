@@ -3,23 +3,22 @@ import PropTypes from 'prop-types';
 import InputLabel from './InputLabel';
 import Utilities from '../helpers/utilities';
 
-/**
- * Class representing a label and a input of type='text'
- *
- * Required props:
- * - label: Sets the text for the input's label
- *
- * Optional props:
- * - id: sets the id attribute for the input and the <label for... attribute
- * - type: string, defaults to 'text'. Sets the input type
- * - value: string. If present pre-populates the input with the given string.
- * - required: bool, defaults to false. Adds required label, required attribute and aria-required='true'
- * - validators: array of Validator objects. If present, field get error state onBlur if the value does not match the given test
- * - enableSpellCheck: true or false, defaults to false. If true, enables browser autocorrection while typing
- * - errorMessage: string. If present triggers the error state and displays the error message
- * - isValid: bool. If true, sets isValid state - i.e. green border
- * - allowedChars: Validator object. If present, user can only type characters that match the given test
- */
+//  Class representing a label and a input of type='text'
+// 
+//  Required props:
+//  - label: Sets the text for the input's label
+// 
+//  Optional props:
+//  - id: sets the id attribute for the input and the <label for... attribute
+//  - type: string, defaults to 'text'. Sets the input type
+//  - value: string. If present pre-populates the input with the given string.
+//  - required: bool, defaults to false. Adds required label, required attribute and aria-required='true'
+//  - validators: array of Validator objects. If present, field get error state onBlur if the value does not match the given test
+//  - enableSpellCheck: true or false, defaults to false. If true, enables browser autocorrection while typing
+//  - errorMessage: string. If present triggers the error state and displays the error message
+//  - isValid: bool. If true, sets isValid state - i.e. green border
+//  - allowedChars: Validator object. If present, user can only type characters that match the given test
+
 export default class TextInput extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
@@ -54,16 +53,16 @@ export default class TextInput extends React.Component {
     required: false
   };
 
-  /**
-   * constructor
-   * @param {object} props The props that will be applied to this component.
-   * Set initial state
-   * Value: value of the input.
-   * isPristine: tracks if user has typed in the input
-   * isValid: tracks if the field is valid based on passed validators
-   * hasError: tracks if the field has an error
-   * errorMessage: displayed message when the field hasError
-   */
+  
+  //  constructor
+  //  @param {object} props The props that will be applied to this component.
+  //  Set initial state
+  //  Value: value of the input.
+  //  isPristine: tracks if user has typed in the input
+  //  isValid: tracks if the field is valid based on passed validators
+  //  hasError: tracks if the field has an error
+  //  errorMessage: displayed message when the field hasError
+  
 
   constructor(props) {
     super(props);
@@ -82,18 +81,18 @@ export default class TextInput extends React.Component {
     };
   }
 
-  /**
-   * check to see if an Id was passed in, if not generate one.
-   */
+  
+//  check to see if an Id was passed in, if not generate one.
+   
   componentWillMount() {
     this.id = this.props.id
       ? this.props.id
       : Utilities.uniqueIdForComponent(this);
   }
 
-  /**
-   * If errorMessage is updated after initial render, adjust the state accordingly
-   */
+
+  // If errorMessage is updated after initial render, adjust the state accordingly
+  
   componentWillReceiveProps({ errorMessage }) {
     if (errorMessage) {
       this.setState({
@@ -105,9 +104,6 @@ export default class TextInput extends React.Component {
     }
   }
 
-  /**
-   * @returns {node} (div) that includes a label, errorMessage, input
-   */
   render() {
     let error = null;
     if (this.state.hasError) {
@@ -143,9 +139,6 @@ export default class TextInput extends React.Component {
     );
   }
 
-  /**
-   * Checks input value against required status and passed validators
-   */
   _validate() {
     let validators = this.props.validators;
     // Check if field empty
@@ -199,9 +192,7 @@ export default class TextInput extends React.Component {
     }
   }
 
-  /**
-   * onBlur event on input
-   */
+  //  onBlur event on input
   _handleBlur() {
     if (
       (this.props.required || this.props.validators) &&
@@ -211,10 +202,9 @@ export default class TextInput extends React.Component {
     }
   }
 
-  /**
-   * This function runs every time the user changes the contents of the input.
-   * @param {event} event The event
-   */
+  
+  //  his function runs every time the user changes the contents of the input.
+  //  @param {event} event The event
   _handleChange(event) {
     // Check if allowedChars validator exists. If it does, check the last char
     // entered against the validator. If validation fails, return thereby preventing

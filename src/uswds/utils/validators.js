@@ -1,22 +1,20 @@
-/**
- * A Validator object contains a test pattern and a message to display is the test fails 
- */
+
+ // A Validator object contains a test pattern and a message to display is the test fails 
+ 
 class Validator {
-  /**
-   * constructor method
-   * @param {regex} pattern the test pattern
-   * @param {string} message message to display is the test fails
-   */
+  // constructor method
+  // @param {regex} pattern the test pattern
+  // @param {string} message message to display is the test fails
+   
   constructor(pattern, message) {
     this.pattern = pattern || false;
     this.message = message || '';
   }
 
-  /**
-   * Check input vs the pattern
-   * @returns {bool} true is matches, false if fails
-   * @param {string} input What's being tested
-   */
+  // Check input vs the pattern
+  // @returns {bool} true is matches, false if fails
+  // @param {string} input What's being tested
+   
   _validate(input) {
     // if no regex, is always false
     if (!this.pattern) {
@@ -37,10 +35,10 @@ class Validator {
     return this.pattern.test(input);
   }
 
-  /**
-   * @returns {bool} true is matches, false if fails
-   * @param {string} input What's being tested
-   */
+  
+  // @returns {bool} true is matches, false if fails
+  // @param {string} input What's being tested
+   
   isValid(input) {
     return this._validate(input);
   }

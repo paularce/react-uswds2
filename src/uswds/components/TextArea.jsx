@@ -3,18 +3,17 @@ import PropTypes from "prop-types";
 import InputLabel from "./InputLabel";
 import Utilities from "../helpers/utilities";
 
-/**
- * Class representing a label and a textarea element
- *
- * Required props:
- * - label: Sets the text for the input's label
- *
- * Optional props:
- * - id: sets the id attribute for the input and the <label for... attribute
- * - value: string. If present pre-populates the input with the given string.
- * - required: bool, defaults to false. Adds required label, required attribute and aria-required='true'
- * - errorMessage: string. If present triggers the error state and displays the error message
- */
+//  Class representing a label and a textarea element
+// 
+//  Required props:
+//  - label: Sets the text for the input's label
+// 
+//  Optional props:
+//  - id: sets the id attribute for the input and the <label for... attribute
+//  - value: string. If present pre-populates the input with the given string.
+//  - required: bool, defaults to false. Adds required label, required attribute and aria-required='true'
+//  - errorMessage: string. If present triggers the error state and displays the error message
+
 export default class TextArea extends React.Component {
   static propTypes = {
     id: PropTypes.string,
@@ -24,16 +23,15 @@ export default class TextArea extends React.Component {
     value: PropTypes.string
   };
 
-  /**
-   * constructor
-   * @param {Object} props The props that will be applied to this component.
-   * Set initial state
-   * Value: Text inside the text area.
-   * isPristine: tracks if user has typed in the input
-   * isValid: tracks if the field is valid based on passed validators
-   * hasError: tracks if the field has an error
-   * errorMessage: displayed message when the field hasError
-   */
+  //  constructor
+  //  @param {Object} props The props that will be applied to this component.
+  //  Set initial state
+  //  Value: Text inside the text area.
+  //  isPristine: tracks if user has typed in the input
+  //  isValid: tracks if the field is valid based on passed validators
+  //  hasError: tracks if the field has an error
+  //  errorMessage: displayed message when the field hasError
+  
   constructor(props) {
     super(props);
 
@@ -51,18 +49,15 @@ export default class TextArea extends React.Component {
     };
   }
 
-  /**
-   * check to see if an Id was passed in, if not generate one.
-   */
+  //  check to see if an Id was passed in, if not generate one.
   componentWillMount() {
     this.id = this.props.id
       ? this.props.id
       : Utilities.uniqueIdForComponent(this);
   }
 
-  /**
-   * If errorMessage is updated after initial render, adjust the state accordingly
-   */
+  
+  //  If errorMessage is updated after initial render, adjust the state accordingly
   componentWillReceiveProps({ errorMessage }) {
     if (errorMessage) {
       this.setState({
@@ -74,9 +69,6 @@ export default class TextArea extends React.Component {
     }
   }
 
-  /**
-   * @returns {node} (div) that includes a label, errorMessage, textarea
-   */
   render() {
     let errorMessage = null;
     if (this.state.hasError) {
@@ -110,9 +102,7 @@ export default class TextArea extends React.Component {
     );
   }
 
-  /**
-   * Checks textarea value against required status
-   */
+  //  Checks textarea value against required status
   _validate() {
     // Check if field is required and empty
     if (this.props.required && !this.state.value) {
@@ -131,19 +121,15 @@ export default class TextArea extends React.Component {
     }
   }
 
-  /**
-   * Actions when user moves focus away from the field
-   */
+  //  Actions when user moves focus away from the field
   _handleBlur() {
     if (this.props.required && !this.state.isPristine) {
       this._validate();
     }
   }
 
-  /**
-   * This function runs every time the user changes the contents of the input.
-   * @param {event} event The event
-   */
+  //  This function runs every time the user changes the contents of the input.
+  //  @param {event} event The event
   _handleChange(event) {
     this.setState({ value: event.target.value }, () => {
       // React docs suggest this callback should generally go in ComponentDidUpdate,

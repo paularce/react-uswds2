@@ -12,10 +12,10 @@ import FormGroup from  '../../uswds/components/FormGroup';
 import { EmailValidator, ZipCodeValidator, PhoneValidator } from '../../uswds/utils/validators';
 import Tag from '../../uswds/components/Tag';
 
-/**
- * Content for the form controls page
- * @returns {node} rendered DOM node
- */
+
+//  Content for the form controls page
+//  @returns {node} rendered DOM node
+
 export default function FormControlsContainer() {
   return (
     <DocsPage title="Form Controls">
@@ -244,14 +244,13 @@ export default function FormControlsContainer() {
       
       <DocsComponent title="Dropdown" id="dropdown">
       
-        {/* Importing */}
         <DocsSection title="Importing">
           <Highlight className="javascript">
             {`import Dropdown from '../../uswds/components/Dropdown';`}
           </Highlight>
         </DocsSection>
         
-        {/* Props */}
+
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
@@ -293,11 +292,7 @@ export default function FormControlsContainer() {
             </TableRow>
           </Table>
         </DocsSection>
-        
-        {/* Accessibility */}
-        {/* <DocsSection title="Accessibility"></DocsSection> */}
-        
-        {/* Usage */}
+
         <DocsSection title="Usage">
           <DocsExample>
             <DocsPreview>
@@ -346,11 +341,7 @@ export default function FormControlsContainer() {
       </DocsComponent>
       
       
-      {/* CHECKBOXES */}
-      {/* ---------------------- */}
       <DocsComponent title="Checkboxes" id="checkboxes">
-      
-        {/* Importing */}
         <DocsSection title="Importing">
           <h5>The Checkbox component can stand alone</h5>
           <Highlight className="javascript">
@@ -362,7 +353,6 @@ export default function FormControlsContainer() {
           </Highlight>
         </DocsSection>
         
-        {/* Props */}
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
@@ -405,7 +395,6 @@ export default function FormControlsContainer() {
           </Table>
         </DocsSection>
         
-        {/* Usage */}
         <DocsSection title="Usage">
           <DocsExample>
             <DocsPreview>
@@ -430,11 +419,7 @@ export default function FormControlsContainer() {
         </DocsSection>
       </DocsComponent>
       
-      
-      {/* RADIO BUTTONS */}
-      {/* ---------------------- */}
       <DocsComponent title="Radio buttons" id="radio-buttons">
-        {/* Importing */}
         <DocsSection title="Importing">
           <h5>The Radio component can stand alone</h5>
           <Highlight className="javascript">
@@ -446,7 +431,6 @@ export default function FormControlsContainer() {
           </Highlight>
         </DocsSection>
         
-        {/* Props */}
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
@@ -489,10 +473,6 @@ export default function FormControlsContainer() {
           </Table>
         </DocsSection>
         
-        {/* Accessibility */}
-        {/* <DocsSection title="Accessibility"></DocsSection> */}
-        
-        {/* Usage */}
         <DocsSection title="Usage">
           <DocsExample>
             <DocsPreview>
@@ -517,17 +497,13 @@ export default function FormControlsContainer() {
         </DocsSection>
       </DocsComponent>
       
-      {/* FIELD SET */}
-      {/* ---------------------- */}
       <DocsComponent title="Field set" id="field-set">
-        {/* Importing */}
         <DocsSection title="Importing">
           <Highlight className="javascript">
             {`import Fieldset from '../../uswds/components/Fieldset';`}
           </Highlight>
         </DocsSection>
         
-        {/* Props */}
         <DocsSection title="Props">
           <Table columns={['Prop', 'Type', 'Default', 'Description']}>
             <TableRow>
@@ -558,11 +534,7 @@ export default function FormControlsContainer() {
             </TableRow>
           </Table>
         </DocsSection>
-        
-        {/* Accessibility */}
-        {/* <DocsSection title="Accessibility"></DocsSection> */}
-        
-        {/* Usage */}
+
         <DocsSection title="Usage">
           <DocsExample>
             <DocsPreview>

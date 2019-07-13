@@ -6,27 +6,24 @@ import { Table, TableRow, TableHeaderCell, TableCell } from '../../uswds/compone
 
 import Tag from '../../uswds/components/Tag';
 
-/**
- * Displays the Styleguide content for Colors.
- */
+
+//  * Displays the Styleguide content for Colors.
+ 
 export default class ColorsContainer extends React.Component {
-  /**
-   * Renders the component.
-   *
-   * @returns {Node|null} The rendered DOM node.
-   */
+  //  Renders the component.
+  // 
+  //  @returns {Node|null} The rendered DOM node.
+
   render() {
     return (
       <DocsPage title="Tag">
           
-          {/* Importing */}
           <DocsSection title="Importing">
             <Highlight className="javascript">
               {`import Tag from '.%path%/uswds/components/Tag.jsx';`}
             </Highlight>
           </DocsSection>
           
-          {/* Props */}
           <DocsSection title="Props">
             <Table columns={['Prop', 'Type', 'Default', 'Description']}>
               <TableRow>
@@ -38,8 +35,6 @@ export default class ColorsContainer extends React.Component {
             </Table>
           </DocsSection>
           
-          
-          {/* Usage */}
           <DocsSection title="Usage">
             <DocsExample>
               <DocsPreview>

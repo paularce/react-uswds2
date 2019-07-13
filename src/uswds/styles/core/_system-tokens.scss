@@ -1,32 +1,26 @@
-/*
-========================================
-core/units
-----------------------------------------
-The master palettes of
-- colors
-- whitespace
-- typescale
-----------------------------------------
-This file is not meant to be modified
-by USWDS project teams. Change your
-project values in
-project/uswds-project-settings
-----------------------------------------
-*/
+// ========================================
+// core/units
+// ----------------------------------------
+// The master palettes of
+// - colors
+// - whitespace
+// - typescale
+// ----------------------------------------
+// This file is not meant to be modified
+// by USWDS project teams. Change your
+// project values in
+// project/uswds-project-settings
+// ----------------------------------------
 
-/*
-----------------------------------------
-Spacing grid multiplier
-----------------------------------------
-*/
+// ----------------------------------------
+// Spacing grid multiplier
+// ----------------------------------------
 
 $system-spacing-grid-base: 8px;
 
-/*
-----------------------------------------
-Spacing grid
-----------------------------------------
-*/
+// ----------------------------------------
+// Spacing grid
+// ----------------------------------------
 
 $neg-prefix: 'neg';
 $system-spacing:(
@@ -107,11 +101,9 @@ $system-column-gaps: (
   6:        6,
 );
 
-/*
-----------------------------------------
-Breakpoints
-----------------------------------------
-*/
+// ----------------------------------------
+// Breakpoints
+// ----------------------------------------
 
 $system-breakpoints: map-collect(
   map-get($system-spacing, large),
@@ -119,11 +111,9 @@ $system-breakpoints: map-collect(
   map-get($system-spacing, largest)
 );
 
-/*
-----------------------------------------
-Units
-----------------------------------------
-*/
+// ----------------------------------------
+// Units
+// ----------------------------------------
 
 $system-spacing-em: (
   small: (
@@ -134,11 +124,9 @@ $system-spacing-em: (
   ),
 );
 
-/*
-----------------------------------------
-Layout grid widths
-----------------------------------------
-*/
+// ----------------------------------------
+// Layout grid widths
+// ----------------------------------------
 
 $system-layout-grid-widths: (
   1:   100% * (1 / 12),
@@ -155,22 +143,18 @@ $system-layout-grid-widths: (
   12:  100% * (12 / 12),
 );
 
-/*
-----------------------------------------
-Font stacks
-----------------------------------------
-*/
+// ----------------------------------------
+// Font stacks
+// ----------------------------------------
 
 $font-stack-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 $font-stack-georgia: 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
 $font-stack-helvetica: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
 $font-stack-monospace: 'Bitstream Vera Sans Mono', 'Consolas', 'Courier', monospace;
 
-/*
-----------------------------------------
-Typeface
-----------------------------------------
-*/
+// ----------------------------------------
+// Typeface
+// ----------------------------------------
 
 $system-typeface-tokens: (
   'system': (
@@ -333,11 +317,9 @@ $all-typeface-tokens: map-merge(
   $theme-typeface-tokens
 );
 
-/*
-----------------------------------------
-Typescale
-----------------------------------------
-*/
+// ----------------------------------------
+// Typescale
+// ----------------------------------------
 
 $system-type-scale: (
   'micro':   10px,
@@ -363,11 +345,9 @@ $system-type-scale: (
   20:        140px,
 );
 
-/*
-----------------------------------------
-Measure
-----------------------------------------
-*/
+// ----------------------------------------
+// Measure
+// ----------------------------------------
 
 $system-measure-smaller:      44ex;
 $system-measure-small:        60ex;
@@ -376,11 +356,9 @@ $system-measure-large:        68ex;
 $system-measure-larger:       72ex;
 $system-measure-largest:      88ex;
 
-/*
-----------------------------------------
-Line height
-----------------------------------------
-*/
+// ----------------------------------------
+// Line height
+// ----------------------------------------
 
 $system-line-height: (
   1:    1,
@@ -391,24 +369,20 @@ $system-line-height: (
   6:    1.75,
 );
 
-/*
-----------------------------------------
-Base cap height
-----------------------------------------
-500px 'N' height measured in Sketch.
-Used for normalizing font sizes.
-Current normalized to Apple system
-fonts.
-----------------------------------------
-*/
+// ----------------------------------------
+// Base cap height
+// ----------------------------------------
+// 500px 'N' height measured in Sketch.
+// Used for normalizing font sizes.
+// Current normalized to Apple system
+// fonts.
+// ----------------------------------------
 
 $system-base-cap-height: 362px;
 
-/*
-----------------------------------------
-Colors
-----------------------------------------
-*/
+// ----------------------------------------
+// Colors
+// ----------------------------------------
 
 @import './system-tokens/red-cool';
 @import './system-tokens/red';

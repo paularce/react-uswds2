@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/**
- * A form group wraps a related set of form elements
- *
- * Required props:
- * - children: node, usually text to display within the tag
- *
- * Optional props:
- * - classes: string, additional classes
- */
+//  A form group wraps a related set of form elements
+// 
+//  Required props:
+//  - children: node, usually text to display within the tag
+// 
+//  Optional props:
+//  - classes: string, additional classes
 
 export default class FormGroup extends React.Component {
   

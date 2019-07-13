@@ -12,21 +12,19 @@ import Form from '../../uswds/components/Form';
 import Fieldset from '../../uswds/components/Fieldset';
 import TextInput from '../../uswds/components/TextInput';
 
-/**
- * Displays the Styleguide content for Form Templates.
- */
+
+//  Displays the Styleguide content for Form Templates.
+
 export default class FormTemplatesContainer extends React.Component {
-  /**
-   * Renders the component.
-   *
-   * @returns {Node|null} The rendered DOM node.
-   */
+
+  //  Renders the component.
+  // 
+  //  @returns {Node|null} The rendered DOM node.
+   
   render() {
     return (
       <DocsPage title="Form templates">
-        {/* If multiple component or component groups on the page, wrap each in a DocsComponent */}
         <DocsComponent title="Component name" id="XXXX_THE_ID_XXXX">
-          {/* Accessibility */}
           <DocsSection title="Accessibility">
             <h4>Known issues with screen readers</h4>
             <p>
@@ -44,7 +42,6 @@ export default class FormTemplatesContainer extends React.Component {
             </p>
           </DocsSection>
 
-          {/* Usage */}
           <DocsSection title="Usage">
             <DocsExample>
               <DocsPreview>

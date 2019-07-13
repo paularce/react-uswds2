@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/**
- * Column container aka Grid.
- * You should put columns inside a Grid
- * @param {[bool]} full defaults to false -- if true, removes padding
- * @param {[node]} children Children
- * @returns {[node]} the rendered DOM node
- */
+//  Column container aka Grid.
+//  You should put columns inside a Grid
+//  @param {[bool]} full defaults to false -- if true, removes padding
+//  @param {[node]} children Children
+//  @returns {[node]} the rendered DOM node
+
 export class Grid extends React.Component {
 
   static propTypes = {
@@ -38,13 +37,11 @@ export class Grid extends React.Component {
   }
 }
 
+//  Column that goes in a Grid that makes a grid
+//  @param {[string]} width width of the column
+//  @param {[node]} children Children
+//  @returns {[node]} the rendered DOM node
 
-/**
- * Column that goes in a Grid that makes a grid
- * @param {[string]} width width of the column
- * @param {[node]} children Children
- * @returns {[node]} the rendered DOM node
- */
 export function Col({classes, children}) {
   return (
     <div className={classes}>

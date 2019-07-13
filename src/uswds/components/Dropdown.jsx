@@ -3,31 +3,28 @@ import PropTypes from 'prop-types';
 import InputLabel from './InputLabel';
 import Utilities from '../helpers/utilities';
 
-/**
- * Class representing a dropdown
- *
- * This component expects that its children will be <options> elements
- *
- * Required props:
- * - label: string. Sets the text for the input's label
- * - children: node. Series of <option> elements
- *
- * Optional props:
- * - id: string. Sets the select's id attribute nd the label's for attribute
- * - value: string. Sets default select choice. Must match the value of one of the <option> elements. Or if an empty string, a blank placeholder is added.
- * - required: bool. Adds required label, required attribute and aria-required='true'
- * - errorMessage: string. If present triggers the error state and displays the error message
- */
+//  Class representing a dropdown
+//
+//  This component expects that its children will be <options> elements
+//
+//  Required props:
+//  - label: string. Sets the text for the input's label
+//  - children: node. Series of <option> elements
+//
+//  Optional props:
+//  - id: string. Sets the select's id attribute nd the label's for attribute
+//  - value: string. Sets default select choice. Must match the value of one of the <option> elements. Or if an empty string, a blank placeholder is added.
+//  - required: bool. Adds required label, required attribute and aria-required='true'
+//  - errorMessage: string. If present triggers the error state and displays the error message
+
 export default class Dropdown extends React.Component {
-  /**
-   * Constructor
-   * @param {object} props The props. See proptypes below.
-   *
-   * Set initial state
-   * value: default selected option passed from a prop
-   * hasError: tracks if the field has an error
-   * errorMessage: displayed message when the field hasError
-   */
+  //  Constructor
+  //  @param {object} props The props. See proptypes below.
+  //
+  //  Set initial state
+  //  value: default selected option passed from a prop
+  //  hasError: tracks if the field has an error
+  //  errorMessage: displayed message when the field hasError
 
   static propTypes = {
     id: PropTypes.string,
@@ -53,18 +50,14 @@ export default class Dropdown extends React.Component {
     };
   }
 
-  /**
-   * check to see if an Id was passed in, if not generate one.
-   */
+  // check to see if an Id was passed in, if not generate one.
   componentWillMount() {
     this.id = this.props.id
       ? this.props.id
       : Utilities.uniqueIdForComponent(this);
   }
 
-  /**
-   * If a errorMessage is passed after initial render, adjust the state accordingly
-   */
+  // If a errorMessage is passed after initial render, adjust the state accordingly
   componentWillReceiveProps({ errorMessage }) {
     if (errorMessage) {
       this.setState({
@@ -74,19 +67,15 @@ export default class Dropdown extends React.Component {
     }
   }
 
-  /**
-   * Update the state when user selects a new option
-   * @param {event} event The async event
-   */
+  //  Update the state when user selects a new option
+  //  @param {event} event The async event
+
   _handleChange(event) {
     this.setState({
       value: event.target.value
     });
   }
 
-  /**
-   * @returns {node} The rendered DOM node
-   */
   render() {
     let errorMessage = null;
     if (this.state.hasError) {
@@ -112,7 +101,8 @@ export default class Dropdown extends React.Component {
         <InputLabel
           htmlFor={this.id}
           required={this.props.required}
-          label={this.props.label} />
+          label={this.props.label}
+        />
 
         {errorMessage}
 
@@ -122,7 +112,8 @@ export default class Dropdown extends React.Component {
           id={this.id}
           value={this.state.value}
           required={this.props.required}
-          onChange={this._handleChange.bind(this)}>
+          onChange={this._handleChange.bind(this)}
+        >
           {emptyPlaceholder}
           {this.props.children}
         </select>

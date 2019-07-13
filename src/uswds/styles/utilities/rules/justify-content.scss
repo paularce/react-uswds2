@@ -1,20 +1,18 @@
-/*
-========================================
-.justify-content
-----------------------------------------
-property: justify-content
-----------------------------------------
-usage:
-  .flex-justify-[key]
-----------------------------------------
-output:
-  justify-content: [value];
-----------------------------------------
-example:
-  .flex-justify-start {
-    justify-content: flex-start; }
-----------------------------------------
-*/
+// ========================================
+// .justify-content
+// ----------------------------------------
+// property: justify-content
+// ----------------------------------------
+// usage:
+//   .flex-justify-[key]
+// ----------------------------------------
+// output:
+//   justify-content: [value];
+// ----------------------------------------
+// example:
+//   .flex-justify-start {
+//     justify-content: flex-start; }
+// ----------------------------------------
 
 $u-justify-content: (
   justify-content: (
