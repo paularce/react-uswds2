@@ -29,7 +29,7 @@ export default class ColorsContainer extends React.Component {
               <TableRow>
                 <TableHeaderCell>classes</TableHeaderCell>
                 <TableCell>string</TableCell>
-                <TableCell></TableCell>
+                <TableCell>''</TableCell>
                 <TableCell>any additional css class to be added to Tag</TableCell>
               </TableRow>
             </Table>

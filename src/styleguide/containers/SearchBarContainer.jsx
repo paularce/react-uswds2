@@ -35,7 +35,7 @@ export default class SearchBarContainer extends React.Component {
                 <Tag>Required</Tag>
               </TableHeaderCell>
               <TableCell>string</TableCell>
-              <TableCell />
+              <TableCell>''</TableCell>
               <TableCell>Page unique Id for the input</TableCell>
             </TableRow>
             <TableRow>

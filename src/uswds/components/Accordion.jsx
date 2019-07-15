@@ -248,17 +248,11 @@ export class AccordionItem extends React.Component {
   }
 
 
-  //  Renders our content element unless our `expanded` prop is set
-  //  to `false`.
+  //  Renders our content element
   // 
-  //  @returns {Node|String} The rendered DOM node or an empty string.
+  //  @returns {Node} The rendered DOM node 
    
   renderContentElement() {
-    // If `this.state.expanded` is set to false then don't render the
-    // content element.
-    if (!this.props.expanded) {
-      return '';
-    }
     let children = React.Children.toArray(this.props.children);
     let element = children.length === 2 ? children[1] : children[0];
     return (
