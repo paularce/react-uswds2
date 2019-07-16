@@ -229,7 +229,7 @@ export class AccordionItem extends React.Component {
       element = <span>{this.props.title}</span>;
     } else {
       if (React.Children.count(this.props.children) !== 2) {
-        throw 'Either a title or 2 child elements must be supplied.';
+        throw new Error('Either a title or 2 child elements must be supplied.');
       }
       let children = React.Children.toArray(this.props.children);
       element = children[0];
@@ -267,7 +267,7 @@ export class AccordionItem extends React.Component {
   render() {
     // Ensure there are only 2 children.
     if (React.Children.count(this.props.children) > 2) {
-      throw 'AccordionItem elements must have no more than 2 children.';
+      throw new Error('AccordionItem elements must have no more than 2 children.');
     }
 
     return (
