@@ -1,4 +1,4 @@
-/* eslint-disable no-throw-literal */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 

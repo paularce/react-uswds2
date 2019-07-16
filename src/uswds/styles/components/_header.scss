@@ -239,7 +239,7 @@ $z-index-overlay: 400;
   .usa-nav__inner {
     @include at-media($theme-navigation-width) {
       @include grid-container;
-      padding-left: units(2) !important; /* stylelint-disable declaration-no-important  */
+      padding-left: units(2) !important;
       position: relative;
     }
   }

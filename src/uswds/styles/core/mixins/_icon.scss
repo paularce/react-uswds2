@@ -7,14 +7,12 @@
     height: $size;
     width: $size;
 
-    /* stylelint-disable block-closing-brace-newline-after, at-rule-empty-line-before */
     @if $direction == 'after' {
       margin-left: $margin;
     }
     @else {
       margin-right: $margin;
     }
-    /* stylelint-enable */
   }
 
   @if $hover == 'hover' {
@@ -48,14 +46,12 @@
     height: units($container-size);
     width: units($container-size);
 
-    /* stylelint-disable block-closing-brace-newline-after, at-rule-empty-line-before */
     @if $direction == 'after' {
       margin-left: units($margin);
     }
     @else {
       margin-right: units($margin);
     }
-    /* stylelint-enable */
   }
 
   @if $hover == 'hover' {

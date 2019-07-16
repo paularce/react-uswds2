@@ -339,7 +339,7 @@ $input-select-margin-right: 1.5;
 
     &::-webkit-contacts-auto-fill-button {
       visibility: hidden;
-      display: none !important; /* stylelint-disable-line declaration-no-important */
+      display: none !important;
       pointer-events: none;
       height: 0;
       width: 0;
