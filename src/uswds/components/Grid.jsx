@@ -10,30 +10,39 @@ import PropTypes from 'prop-types';
 export class Grid extends React.Component {
 
   static propTypes = {
-    full: PropTypes.bool,
     children: PropTypes.node.isRequired,
-    gapClass: PropTypes.string
+    full: PropTypes.bool,
+    gapClass: PropTypes.string,
+    gridClasses: PropTypes.string,
+    rowClasses: PropTypes.string
   }
   
   static defaultProps = {
     full: false,
-    gapClass: ''
+    gapClass: '',
+    gridClasses: '',
+    rowClasses: ''
   }
 
   renderRow() {
     return(
-      <div className={`grid-row ${this.props.gapClass}`}>
+      <div className={`grid-row ${this.props.gapClass} ${this.props.gridClasses}`}>
         {this.props.children}
       </div>
     );
   }
 
   render() {
-    return (
-        <div className={this.props.full ? '' : 'grid-container'}>
-            {this.renderRow()}
+    const rowContents= this.renderRow();
+
+    if(!this.props.full) {
+      return (
+        <div className={`grid-container ${this.props.gridClasses}`}>
+          {rowContents}
         </div>
-    );
+      )
+    }
+    return rowContents;
   }
 }
 

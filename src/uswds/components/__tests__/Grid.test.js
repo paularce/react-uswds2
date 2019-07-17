@@ -37,4 +37,14 @@ describe('Grid', () => {
     );
     expect(wrapper.hasClass('grid-container')).toBe(false);
   });
+
+  it('passes additional classes through gridclasses attribute', () => {
+    wrapper = shallow(
+      <Grid gridClasses="additional-class">
+        <Col classes='grid-col-6'></Col>
+        <Col classes='grid-col-6'></Col>
+      </Grid>
+    );
+    expect(wrapper.hasClass('additional-class')).toBe(true);
+  });
 });
