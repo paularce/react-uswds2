@@ -16,6 +16,7 @@ import Utilities from '../helpers/utilities';
 //  - value: string. Sets default select choice. Must match the value of one of the <option> elements. Or if an empty string, a blank placeholder is added.
 //  - required: bool. Adds required label, required attribute and aria-required='true'
 //  - errorMessage: string. If present triggers the error state and displays the error message
+//  - onChange: function. A callback for changes to the dropdown
 
 export default class Dropdown extends React.Component {
   //  Constructor
@@ -33,7 +34,8 @@ export default class Dropdown extends React.Component {
     required: PropTypes.bool,
     hasError: PropTypes.bool,
     errorMessage: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.string,
+    onChange: PropTypes.func
   };
 
   static defaultProps = {
@@ -71,6 +73,9 @@ export default class Dropdown extends React.Component {
   //  @param {event} event The async event
 
   _handleChange(event) {
+    if(this.props.onChange) {
+      this.props.onChange(event);
+    }
     this.setState({
       value: event.target.value
     });

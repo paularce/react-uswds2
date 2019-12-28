@@ -81,4 +81,14 @@ describe('Dropdown', () => {
     wrapper.find('select').simulate('change', {target: { value : testValue}});
     expect(wrapper.find('select').props().value).toBe(testValue);
   });
+
+  it('accepts an onChange prop', () => {
+    const handler = jest.fn();
+    const testValue = 'value1'
+    wrapper = mount(<Dropdown value={'value1'} label={labelText} onChange={handler}>
+      <option value='value1'>Option A</option>
+    </Dropdown>);
+    wrapper.find('select').simulate('change', {target: { value : testValue}});
+    expect(handler).toHaveBeenCalled();
+  });
 });
