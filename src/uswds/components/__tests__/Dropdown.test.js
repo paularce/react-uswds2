@@ -91,4 +91,22 @@ describe('Dropdown', () => {
     wrapper.find('select').simulate('change', {target: { value : testValue}});
     expect(handler).toHaveBeenCalled();
   });
+
+  it('re-renders if its value prop is altered', () => {
+    const testValue = 'resultant';
+    wrapper = mount(
+      <Dropdown value="initial" label={labelText}>
+        <option value="value1">Option A</option>
+        <option value="value2">Option B</option>
+        <option value="value3">Option C</option>
+      </Dropdown>
+    );
+    const value = wrapper.find('select').props().value;
+    expect(value).toBe('initial')
+
+    wrapper.setProps({ value: testValue }, () => {
+      const value = wrapper.find('select').props().value;
+      expect(value).toBe(testValue)
+    })
+  })
 });

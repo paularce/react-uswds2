@@ -60,12 +60,16 @@ export default class Dropdown extends React.Component {
   }
 
   // If a errorMessage is passed after initial render, adjust the state accordingly
-  componentWillReceiveProps({ errorMessage }) {
+  componentWillReceiveProps({ errorMessage, value }) {
     if (errorMessage) {
       this.setState({
         hasError: true,
         errorMessageBody: errorMessage
       });
+    }
+
+    if (value !== undefined) {
+      this.setState({ value });
     }
   }
 
